@@ -1,0 +1,17 @@
+{
+  "name": "fatodono-skills",
+  "private": true,
+  "description": "Agent skills by fatodono, shipped as Claude Code plugins.",
+  "license": "MIT",
+  "workspaces": [
+    "plugins/*"
+  ],
+  "scripts": {
+    "check": "node scripts/check-repo.mjs && node scripts/sync-plugin-versions.mjs --check",
+    "changeset": "changeset",
+    "version": "changeset version && node scripts/sync-plugin-versions.mjs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0"
+  }
+}

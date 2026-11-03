@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+
+# Local Claude Code state, not part of the repo.
+.claude/settings.local.json
+.claude/afk-farmer/

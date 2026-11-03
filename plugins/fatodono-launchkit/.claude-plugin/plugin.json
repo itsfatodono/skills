@@ -1,0 +1,12 @@
+{
+  "name": "fatodono-launchkit",
+  "version": "0.1.0",
+  "description": "Skills for releasing an app to the stores.",
+  "author": {
+    "name": "fatodono"
+  },
+  "license": "MIT",
+  "dependencies": [
+    "fatodono"
+  ]
+}

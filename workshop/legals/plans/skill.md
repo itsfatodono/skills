@@ -4,7 +4,7 @@ Work that belongs to no single item. Item work is in the item's own file ([READM
 
 ## Move into the new repo
 
-- [x] Move the plugin into `plugins/fatodono-launchkit/` and rename the skill from `founders-legals` to `legals`. Update `ask-fato`.
+- [x] Move the plugin into `plugins/fatodono-founderkit/` and rename the skill from `founders-legals` to `legals`. Update `ask-fato`.
 - [x] Decide what happens to this folder's own git history (87 commits): kept only in the old repo (`legal-docs`).
 - [ ] Shipped files cite `PLAN.md`, which users never get: `regions/tr/tr-distance-sales.md`, `tr-pre-contract-info.md`, `tr-kvkk-notice.md` (decision 47), `regions/eu/ropa.md`, `regions/uk/ropa.md` (decision 37), and `regions/eu/region.md`, `regions/de/region.md` (seed catalog numbers, now in `plans/README.md`). Say the rule itself instead of citing it.
 

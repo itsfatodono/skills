@@ -13,3 +13,5 @@ Run `npm run check` and `claude plugin validate . --strict` after touching `plug
 ## Releases
 
 Plugins are versioned with changesets. Before merging a change to `plugins/<plugin>/`, run `npx changeset` and write one line about the change in the user's terms. Contributors don't write changesets. Never edit `version` in `plugin.json` by hand.
+
+The repo has its own version, in the root `package.json`. GitHub releases are per repo, never per plugin: bump the root version by hand to cut one, and on the next push to `main` `scripts/release-repo.mjs` creates `fatodono <version>` (tag `v<version>`), listing each plugin whose version changed since the previous release with its CHANGELOG lines. Keep those lines short: what was added, changed or fixed.

@@ -28,7 +28,7 @@ workshop/legals/                     ← development folder in fatodono/skills
   research/<doc-id>/                 ← builder records: sample URLs, scan dates, extraction tables
                                        (no full sample texts; not shipped)
   research/regions/<code>/<doc-id>/  ← the same, per region
-  ../../plugins/fatodono-launchkit/  ← what ships; everything above stays in workshop/legals/
+  ../../plugins/fatodono-founderkit/  ← what ships; everything above stays in workshop/legals/
     .claude-plugin/plugin.json
     skills/legals/
       SKILL.md                       ← two branches: write (default) and build
@@ -112,7 +112,7 @@ Details:
 
 ## Build branch (creator run; user run)
 
-The method lives in `plugins/fatodono-launchkit/skills/legals/build/build.md`: a pool of up to 30 candidates (10 each
+The method lives in `plugins/fatodono-founderkit/skills/legals/build/build.md`: a pool of up to 30 candidates (10 each
 large, mid, small), a first batch of 15 (5 per size), saturation (5 non-new samples in a row,
 cap = the pool), merge, facts, skeleton, record. A region run builds one region block the same
 way and touches nothing outside `regions/<code>/`.
@@ -133,9 +133,9 @@ Numbers are stable because research files cite them; a gap is a decision that no
 7. Name: `legals`.
 8. Pricing: open, does not block v1.
 9. Market: Turkey + global. Regional documents appear only when the trigger questions call for them.
-10. Distribution: a Claude Code plugin (`fatodono-launchkit`); other agents get the same skill
+10. Distribution: a Claude Code plugin (`fatodono-founderkit`); other agents get the same skill
     through skills.sh.
-11. Location: `workshop/legals/` and `plugins/fatodono-launchkit/skills/legals/` in fatodono-skills.
+11. Location: `workshop/legals/` and `plugins/fatodono-founderkit/skills/legals/` in fatodono-skills.
     History before 2026-11-04 is in `~/Projects/legal-docs`.
 13. Document selection uses fixed trigger questions from `helpers/catalog.md`.
 14. Existing documents: patch mode by default.
@@ -265,7 +265,7 @@ Numbers are stable because research files cite them; a gap is a decision that no
 52. De-slop: in the write branch, a fresh `slop-editor` runs `helpers/de-slop.md` on every AI-written,
     human-facing text before its file is written. `helpers/de-slop.md` is a line edit written for
     legal text from blader/humanizer and petergyang/no-ai-slop (MIT,
-    `plugins/fatodono-launchkit/THIRD-PARTY-NOTICES.md`): words change inside each sentence,
+    `plugins/fatodono-founderkit/THIRD-PARTY-NOTICES.md`): words change inside each sentence,
     and each edited sentence is checked against its original, because in a legal document
     every sentence is a term. The open-source notices skip it: they are copied licence texts.
 53. _Avoid_ means invalid. A pattern that breaks a law or regulation, that the enforcing

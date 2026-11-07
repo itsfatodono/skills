@@ -1,7 +1,8 @@
 {
   "name": "fatodono-skills",
+  "version": "0.5.0",
   "private": true,
-  "description": "Agent skills by fatodono, shipped as Claude Code plugins.",
+  "description": "Agent skills for the non-code side of shipping an app, done with an engineer's rigor.",
   "license": "MIT",
   "workspaces": [
     "plugins/*"

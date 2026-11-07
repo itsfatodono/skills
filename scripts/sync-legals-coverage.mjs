@@ -10,7 +10,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repo = join(dirname(fileURLToPath(import.meta.url)), "..");
-const skill = join(repo, "plugins", "fatodono-launchkit", "skills", "legals");
+const skill = join(repo, "plugins", "fatodono-founderkit", "skills", "legals");
 const readmePath = join(skill, "README.md");
 const check = process.argv.includes("--check");
 const read = (path) => readFileSync(path, "utf8");

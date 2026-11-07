@@ -1,7 +1,7 @@
 # tr-explicit-consent: build record
 
 Built 2026-10-27 (region run `tr`, `part: whole`; PLAN.md item 12, decisions 25, 27, 45–47, 50).
-Skeleton: `plugins/fatodono-launchkit/skills/legals/regions/tr/tr-explicit-consent.md`. Catalog row added to
+Skeleton: `plugins/fatodono-founderkit/skills/legals/regions/tr/tr-explicit-consent.md`. Catalog row added to
 `regions/tr/catalog.md`.
 
 ## Files

@@ -1,7 +1,7 @@
 # tr-distance-sales: build record
 
 Built 2026-10-26 (Phase 2 pilot, region run `tr`, `part: whole`). Skeleton:
-`plugins/fatodono-launchkit/skills/legals/regions/tr/tr-distance-sales.md`. Item 39 of the seed catalog
+`plugins/fatodono-founderkit/skills/legals/regions/tr/tr-distance-sales.md`. Item 39 of the seed catalog
 (Mesafeli Satış Sözleşmesi) only; the Ön Bilgilendirme Formu (item 40) was skipped wherever a
 page carried both (rule 6).
 

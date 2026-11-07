@@ -29,7 +29,7 @@ skeleton → Record**
 | 8   | Record                    | main agent                                         | Which documents we read, which we threw out and why, and why we stopped.                                                | `README.md`             |
 
 Research files are under `research/<doc-id>/`; the skeleton and the facts schema are under
-`plugins/fatodono-launchkit/skills/legals/` (from the repo root). The full method is in `build/build.md`.
+`plugins/fatodono-founderkit/skills/legals/` (from the repo root). The full method is in `build/build.md`.
 
 ## A few rules worth knowing:
 
@@ -63,7 +63,7 @@ Trim → Check**
 ## Agents
 
 The **main agent** is the session the user talks to. Everything else is a **subagent** it
-starts. Each subagent's instructions are in `plugins/fatodono-launchkit/skills/legals/helpers/`, so they ship
+starts. Each subagent's instructions are in `plugins/fatodono-founderkit/skills/legals/helpers/`, so they ship
 with the skill to every harness.
 
 - **Only the main agent starts subagents.** A subagent cannot start one of its own, so a build is
@@ -75,7 +75,7 @@ with the skill to every harness.
   the draft and `helpers/de-slop.md`. `overshare-checker` sees the document and its skeleton,
   never the facts. Neither checker writes.
 - **Models and effort.** Each agent's effort is at the top of its file in
-  `plugins/fatodono-launchkit/skills/legals/helpers/`; the merge helper's is in `SKILL.md` *Creator run*.
+  `plugins/fatodono-founderkit/skills/legals/helpers/`; the merge helper's is in `SKILL.md` *Creator run*.
   The main agent sets them on every dispatch, with the model (`SKILL.md`).
 - **Cost.** A full build in this repo is about 35 subagents per document. A build in a user's repo
   is smaller: 1 collector and 10 extractors. The skill asks the user before any build.
@@ -101,7 +101,7 @@ something that already exists, open an issue.
 
 ### Example prompt
 
-Start Claude Code at the repo root with the plugin loaded (`claude --plugin-dir plugins/fatodono-launchkit`), set
+Start Claude Code at the repo root with the plugin loaded (`claude --plugin-dir plugins/fatodono-founderkit`), set
 `/effort medium` (the skill sets every subagent's own level), then:
 
 ```text

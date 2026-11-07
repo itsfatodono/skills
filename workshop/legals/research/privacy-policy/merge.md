@@ -45,7 +45,7 @@ pointer (links to a separate page), embedded (inside another section).
 ## Regional content
 
 Content one law requires, left out of the root skeleton since format 2 and moved to the region
-blocks in `plugins/fatodono-launchkit/skills/legals/regions/<code>/privacy-policy.md`. Region runs start from
+blocks in `plugins/fatodono-founderkit/skills/legals/regions/<code>/privacy-policy.md`. Region runs start from
 these samples.
 
 | Region | Content | Samples |

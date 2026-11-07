@@ -1,7 +1,7 @@
 # tr-pre-contract-info: build record
 
 Built 2026-10-27 (region run `tr`, `part: whole`; PLAN.md decision 45, track B). Skeleton:
-`plugins/fatodono-launchkit/skills/legals/regions/tr/tr-pre-contract-info.md`. Item 40 of the seed catalog
+`plugins/fatodono-founderkit/skills/legals/regions/tr/tr-pre-contract-info.md`. Item 40 of the seed catalog
 (Ön Bilgilendirme Formu). Catalog row added to `regions/tr/catalog.md`.
 
 ## Files

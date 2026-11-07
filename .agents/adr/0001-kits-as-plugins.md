@@ -8,10 +8,10 @@ Some skills need far more material to develop than to run. The legals skill is b
 
 ## Decision
 
-- **One plugin per kit** (`fatodono-launchkit`, later `fatodono-devkit`), as in mattpocock/skills. Users who want individual skills use skills.sh. We considered one plugin per skill plus bundle plugins, and rejected it because it costs a manifest and a version per skill for a choice that skills.sh already offers.
+- **One plugin per kit** (`fatodono-founderkit`, later `fatodono-devkit`), as in mattpocock/skills. Users who want individual skills use skills.sh. We considered one plugin per skill plus bundle plugins, and rejected it because it costs a manifest and a version per skill for a choice that skills.sh already offers.
 - **A separate router plugin, `fatodono`,** that every kit depends on. The router comes with whichever kit a user installs, and one `ask-fato` can map every kit.
 - **`plugins/` and `workshop/` in one repo.** Each marketplace entry's source is `./plugins/<plugin>`, so only that folder is copied into a user's plugin cache. Contributors still get the whole pipeline in one place.
-- **Plugin names start with `fatodono-`.** Names in `claude-plugins-official` are global, and a bare `launchkit` would likely collide there.
+- **Plugin names start with `fatodono-`.** Names in `claude-plugins-official` are global, and a bare `founderkit` would likely collide there.
 
 ## Consequences
 

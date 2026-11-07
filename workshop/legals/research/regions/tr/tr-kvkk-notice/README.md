@@ -1,7 +1,7 @@
 # tr-kvkk-notice: build record
 
 Built 2026-10-27 (region run `tr`, `part: whole`; PLAN.md decision 45, track A). Skeleton:
-`plugins/fatodono-launchkit/skills/legals/regions/tr/tr-kvkk-notice.md`. Item 11 of the seed catalog (KVKK
+`plugins/fatodono-founderkit/skills/legals/regions/tr/tr-kvkk-notice.md`. Item 11 of the seed catalog (KVKK
 Aydınlatma Metni for customers and users). Catalog row added to `regions/tr/catalog.md`.
 
 ## Files

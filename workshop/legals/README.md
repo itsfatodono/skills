@@ -29,12 +29,12 @@ more.
 Until it is published, load it from this repo:
 
 ```sh
-claude --plugin-dir /path/to/fatodono-skills/plugins/fatodono-launchkit
+claude --plugin-dir /path/to/fatodono-skills/plugins/fatodono-founderkit
 ```
 
 Then, in your app's repo, ask in your own words: "write our privacy policy and terms", "update
 our refund policy", "which legal documents do we need before launch?". You can also type
-`/fatodono-launchkit:legals`.
+`/fatodono-founderkit:legals`.
 
 A run goes like this:
 
@@ -99,10 +99,10 @@ repo.
 The skill ships from `plugins/`; paths under it are from the repo root. Everything else is in
 this folder (`workshop/legals/`) and never ships.
 
-- `plugins/fatodono-launchkit/skills/legals/`: the skill. `SKILL.md` is the entry point; skeletons are in
+- `plugins/fatodono-founderkit/skills/legals/`: the skill. `SKILL.md` is the entry point; skeletons are in
   `skeletons/`, regions in `regions/<code>/`, formats in `formats/`, the building method in
   `build/`.
-- `plugins/fatodono-launchkit/skills/legals/helpers/`: the instructions of each agent the skill dispatches.
+- `plugins/fatodono-founderkit/skills/legals/helpers/`: the instructions of each agent the skill dispatches.
 - `research/`: how each skeleton was built: candidates, extraction tables, merge notes. Not
   shipped.
 - `PLAN.md`: goal, structure and decisions.
@@ -113,7 +113,7 @@ The rules are in `formats/region-format.md`.
 
 `helpers/de-slop.md` is adapted from [blader/humanizer](https://github.com/blader/humanizer) and
 [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT); their notices are in
-`plugins/fatodono-launchkit/THIRD-PARTY-NOTICES.md`.
+`plugins/fatodono-founderkit/THIRD-PARTY-NOTICES.md`.
 
 // Her ne kadar 400+ firmadan distilled olsa da avukatınıza gösteriniz
 // Readme ' ye yazalım eğer legal dökümanları sizi daha fazla korumasını evil bi yerden yaklaşmasını istiyorsanız bunu söyleyin facts.md' ye yazacaktır. bundan sonra ona göre yapar ama önermiyorum.

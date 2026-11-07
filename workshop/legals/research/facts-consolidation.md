@@ -6,7 +6,7 @@ Proposal only; nothing under `plugin/` was edited. Written 2026-10-27.
 Scope read: `helpers/facts-schema.md` (95 keys), `regions/{eu,uk,us,tr}/facts.md` (5 + 7 + 1 + 16 keys),
 and every `facts.*` reference under `plugin/` (skeletons, region blocks, agents, `SKILL.md`,
 `helpers/catalog.md`, `helpers/grill.md`, `build/`, `formats/`). Paths below are relative to
-`plugins/fatodono-launchkit/skills/legals/` unless they start with `plugin/`.
+`plugins/fatodono-founderkit/skills/legals/` unless they start with `plugin/`.
 
 Test applied: merge only when the two keys would always get the same answer for the same company.
 

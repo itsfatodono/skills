@@ -1,6 +1,6 @@
 # cookie-policy: build record
 
-Built 2026-10-27. Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/cookie-policy.md`. Scope
+Built 2026-10-27. Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/cookie-policy.md`. Scope
 (owner, 2026-10-27): the policy only; consent-banner text is a separate seed item.
 
 ## Files

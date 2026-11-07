@@ -1,6 +1,6 @@
 # legals
 
-Built for new startups that need their legal documents in place before launch. The 14 items
+Built for startups and solo developers who need their app's legal documents, before launch or long after it. The 14 items
 ready today are distilled from about 360 real companies' documents; the target is about 2100
 across all 72 items. Feel free to contribute.
 
@@ -24,7 +24,7 @@ Pick one per agent, because installing both gives you the skill twice.
 
 ```bash
 claude plugin marketplace add itsfatodono/skills
-claude plugin install fatodono-launchkit@fatodono
+claude plugin install fatodono-founderkit@fatodono
 ```
 
 **Updates:** automatic once you enable auto-update for this marketplace (`/plugin` → Marketplaces → `fatodono` → Enable auto-update). To update by hand, run `claude plugin marketplace update fatodono`.
@@ -32,14 +32,14 @@ claude plugin install fatodono-launchkit@fatodono
 </details>
 
 <details>
-<summary><b>Codex plugin</b>: manual-update</summary>
+<summary><b>Codex plugin</b>: auto-update</summary>
 
 ```bash
 codex plugin marketplace add itsfatodono/skills
-codex plugin add fatodono-launchkit@fatodono
+codex plugin add fatodono-founderkit@fatodono
 ```
 
-**Updates:** run `codex plugin marketplace upgrade fatodono`, then `codex plugin add fatodono-launchkit@fatodono` again.
+**Updates:** automatic. Codex refreshes Git marketplaces and the plugins you installed from them on its own. To update by hand, run `codex plugin marketplace upgrade fatodono`.
 
 </details>
 

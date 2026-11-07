@@ -1,7 +1,7 @@
 # data-subject-request, `tr` block: build record
 
 Built 2026-10-27 (region run `tr`, `part: block` of the root item; PLAN.md item 13, decisions 45,
-47, 49, 50). Block: `plugins/fatodono-launchkit/skills/legals/regions/tr/data-subject-request.md`. Root
+47, 49, 50). Block: `plugins/fatodono-founderkit/skills/legals/regions/tr/data-subject-request.md`. Root
 skeleton and id list: `skeletons/data-subject-request.md`, `research/data-subject-request/merge.md`
 (build `2f9af25`). Source row added to `regions/tr/region.md` *Documents*; no `catalog.md` row,
 since the item is in the root catalog.

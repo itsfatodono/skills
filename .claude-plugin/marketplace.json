@@ -11,9 +11,9 @@
       "description": "The router: /fatodono:ask-fato tells you which fatodono skill fits. Every kit installs it."
     },
     {
-      "name": "fatodono-launchkit",
-      "source": "./plugins/fatodono-launchkit",
-      "description": "Skills for releasing an app to the stores."
+      "name": "fatodono-founderkit",
+      "source": "./plugins/fatodono-founderkit",
+      "description": "Skills for the work around your app that isn't code."
     }
   ]
 }

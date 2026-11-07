@@ -1,7 +1,7 @@
 # subscription-terms: build record
 
 Built 2026-10-26 (Phase 3, batch 1, global run, English). Skeleton:
-`plugins/fatodono-launchkit/skills/legals/skeletons/subscription-terms.md`. New fact keys:
+`plugins/fatodono-founderkit/skills/legals/skeletons/subscription-terms.md`. New fact keys:
 `proposed-facts.md`. Merged section list, judging and regional content: `merge.md`.
 Selection: `candidates.md`.
 

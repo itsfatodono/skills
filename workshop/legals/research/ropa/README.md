@@ -1,7 +1,7 @@
 # ropa: build record
 
 Built 2026-10-26 (Phase 2 pilot of the alternative sources, `sources.md` *Few public samples*).
-Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/ropa.md`. Item 18 of the seed catalog, family
+Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/ropa.md`. Item 18 of the seed catalog, family
 `internal-compliance`. New fact keys: `proposed-facts.md`. Item-specific extraction rules:
 `extract-notes.md`.
 

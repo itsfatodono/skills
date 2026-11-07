@@ -1,6 +1,6 @@
 # data-subject-request (root): build record
 
-Built 2026-10-27. Root skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/data-subject-request.md`.
+Built 2026-10-27. Root skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/data-subject-request.md`.
 Region blocks: `regions/eu/data-subject-request.md`, `regions/uk/data-subject-request.md`,
 `regions/us/data-subject-request.md`. The `tr` block is built from the KVKK pool (PLAN.md
 decisions 45 and 49) and maps against this build's ids (`merge.md` *Section ids*). The document is

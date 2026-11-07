@@ -210,7 +210,7 @@ Wave 1: `oss` done, 38 rows, about 25 skipped (`ses_e83c548d6ffe3l51fKocQ19xrm`)
 Aydınlatma reselection: 30 picks (10/10/10), 19 of 20 kept as `no-transfer`, RE/MAX dropped at the Art. 6 check. Reserve: 6 large, 0 mid, 33 small. Salonia (self-described sample text) is last in the small reserve.
 DSAR probe (`ses_e83b35b36ffeKYTSAqCz5h2HQV`): there are 49 blocked rows, not 50. curl recipes work for OneTrust (24) and Transcend (2), and TrustArc works but has 0 rows here.
 The other 23 rows have no recipe (DataGrail, SixFifty, Zendesk, 7 in-house SPAs, 6 bot walls, 4 others). The recipes were added to
-`plugins/fatodono-launchkit/skills/legals/helpers/sample-extractor.md` step 1 *Fetch* on 2026-10-27, so later builds get them by default. Readable DSAR rows: 46 + 26 = 72.
+`plugins/fatodono-founderkit/skills/legals/helpers/sample-extractor.md` step 1 *Fetch* on 2026-10-27, so later builds get them by default. Readable DSAR rows: 46 + 26 = 72.
 ÖBF merge (`ses_e83b3aaa1ffeaaHfYRydyQ9GnN`): 28 ids (9 core, 9 common, 7 at 20–27%, 3 rare), 23 reuse tr-distance-sales names,
 no copies in s01–s15. Accepted by the chief of staff: signature/date blocks are document level (decision 44, form treated as a notice);
 s01's built-in KVKK consent is flagged under decision 47. The session was resumed to judge s16–s20.

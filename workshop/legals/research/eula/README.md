@@ -1,6 +1,6 @@
 # eula: build record
 
-Built 2026-10-27. Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/eula.md`.
+Built 2026-10-27. Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/eula.md`.
 
 ## Files
 

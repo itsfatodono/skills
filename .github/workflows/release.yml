@@ -9,7 +9,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Version
+    name: Version and release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,8 +24,10 @@ jobs:
         uses: changesets/action@v1
         with:
           version: npm run version
-          publish: npx changeset tag
+          publish: node scripts/release-repo.mjs
+          createGithubReleases: false
           commit: "chore: version plugins"
           title: "chore: version plugins"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

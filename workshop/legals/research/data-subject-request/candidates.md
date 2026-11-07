@@ -56,7 +56,7 @@ non-EU/UK row is Adspark (PH, reserve M3).
 - 1 runs on Jotform (c24), on the company's own Jotform sub-domain and linked from its privacy
   notice.
 - 15 are the company's own form: 14 web forms and 1 PDF (c21).
-- Recipes are in `plugins/fatodono-launchkit/skills/legals/helpers/sample-extractor.md` step 1 and `portal-probe.md`. On
+- Recipes are in `plugins/fatodono-founderkit/skills/legals/helpers/sample-extractor.md` step 1 and `portal-probe.md`. On
   2026-10-27, all 26 OneTrust URLs in the pool (24 blocked rows, plus Aldermore and Philips,
   found behind open rows) returned a `/publish` entry. GEICO needs its `reDirectUrl` hop.
   OpenAI is read from Wayback (latest capture 2026-06-04, `privacyCenterSubjects.json`).

@@ -1,6 +1,6 @@
 ---
 name: legals
-description: Legal documents for the user's own app, filled from its code (privacy policy, terms of service, subscription terms, refund policy, account deletion page). Use to write or update them, to find which ones a launch needs, or to build a skeleton for a legal document.
+description: Legal documents for the user's own app, filled from its code (privacy policy, terms of service, subscription terms, refund policy, account deletion page). Use to write or update them, to find which ones the app needs, or to build a skeleton for a legal document.
 ---
 
 # Legals
@@ -125,7 +125,7 @@ Where the output goes, and how big the run is, depends on the repo you are worki
   `legal/.skeletons/regions/<code>/<doc-id>.md`), and new fact keys to
   `legal/.skeletons/helpers/facts-schema.md`.
 - **Creator run:** the working repo is the skill's own (its root has
-  `plugins/fatodono-launchkit/skills/legals/` and `workshop/legals/research/`). Paths starting
+  `plugins/fatodono-founderkit/skills/legals/` and `workshop/legals/research/`). Paths starting
   with `research/` are relative to `workshop/legals/`; the rest are relative to this skill's
   folder, and those files ship with the plugin. The run is full size, about
   35 helper agents per document: about 5 `pool-collector` subagents (medium) and 15–30

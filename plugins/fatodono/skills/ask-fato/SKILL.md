@@ -16,7 +16,7 @@ Route by the user's **situation**, not by kit. A **kit** is only the plugin a sk
 
 The route an app takes from "it works" to "it's in the stores".
 
-1. **`legals`** writes the legal documents the launch needs (privacy policy, terms of service, subscription terms, refund policy, account deletion page, and region-specific ones such as the Turkish distance sales contract) and works out which of them this app actually needs. It reads the facts from the code and asks only what the code can't show (company name, support address, refund rules), so the later it runs, the fewer questions it asks. Drafts, not legal advice. It's model-invoked: the user can just say "write the legal documents for my app".
+1. **`legals`** writes the legal documents the app needs (privacy policy, terms of service, subscription terms, refund policy, account deletion page, and region-specific ones such as the Turkish distance sales contract) and works out which of them this app actually needs. It reads the facts from the code and asks only what the code can't show (company name, support address, refund rules), so the later it runs, the fewer questions it asks. Drafts, not legal advice. It's model-invoked: the user can just say "write the legal documents for my app".
 
 ## After launch
 
@@ -26,7 +26,7 @@ The route an app takes from "it works" to "it's in the stores".
 
 | Skill    | Kit                  |
 | -------- | -------------------- |
-| `legals` | `fatodono-launchkit` |
+| `legals` | `fatodono-founderkit` |
 
 ## When the right skill is not installed
 

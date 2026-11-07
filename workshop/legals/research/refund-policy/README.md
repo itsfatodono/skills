@@ -1,6 +1,6 @@
 # refund-policy: build record
 
-Built 2026-10-26 (Phase 3 batch 1). Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/refund-policy.md`.
+Built 2026-10-26 (Phase 3 batch 1). Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/refund-policy.md`.
 New fact keys: `proposed-facts.md`. Merge, saturation log and regional content: `merge.md`.
 
 ## Run

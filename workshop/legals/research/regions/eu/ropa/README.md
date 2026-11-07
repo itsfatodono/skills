@@ -2,7 +2,7 @@
 
 Built 2026-10-27 (region run `eu`, `part: block`); recounted the same day with the 8 EUDPR
 registers (PLAN.md decisions 35 and 36). Block:
-`plugins/fatodono-launchkit/skills/legals/regions/eu/ropa.md`. New fact key:
+`plugins/fatodono-founderkit/skills/legals/regions/eu/ropa.md`. New fact key:
 `facts.eu.processor_customers` in `regions/eu/facts.md`. Merged ids: `merge.md`. Selection:
 `candidates.md`.
 

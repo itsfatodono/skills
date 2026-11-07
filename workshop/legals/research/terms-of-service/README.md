@@ -1,7 +1,7 @@
 # terms-of-service: build record
 
 Built 2026-10-26 (Phase 3, batch 1). Skeleton:
-`plugins/fatodono-launchkit/skills/legals/skeletons/terms-of-service.md`.
+`plugins/fatodono-founderkit/skills/legals/skeletons/terms-of-service.md`.
 
 ## Files
 

@@ -1,6 +1,6 @@
 # account-deletion: build record
 
-Built 2026-10-26 (batch 1). Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/account-deletion.md`.
+Built 2026-10-26 (batch 1). Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/account-deletion.md`.
 Proposed fact keys: `proposed-facts.md`.
 
 ## Run

@@ -1,6 +1,6 @@
 # oss-notices: build record
 
-Built 2026-10-27. Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/oss-notices.md`. This was a small
+Built 2026-10-27. Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/oss-notices.md`. This was a small
 creator build (PLAN.md decision 48): `build/build.md` *User run* numbers apply instead of the
 pre-built ones, because tools generate most of an open source notice and its structure is short.
 That means one collector slice, up to 15 candidates of mixed sizes with no size thirds, a first batch

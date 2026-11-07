@@ -1,7 +1,7 @@
 # ropa, `uk` block: build record
 
 Built 2026-10-27 as a region run (`build/build.md` *Region run*, `block`). Output:
-`plugins/fatodono-launchkit/skills/legals/regions/uk/ropa.md`; new keys `facts.uk.ico_registration`,
+`plugins/fatodono-founderkit/skills/legals/regions/uk/ropa.md`; new keys `facts.uk.ico_registration`,
 `facts.uk.legitimate_interests`, `facts.uk.special_conditions`, `facts.uk.appropriate_policy`
 in `regions/uk/facts.md`. Pool: `candidates.md`; raw rows: `pool/r10-uk-extra.md` plus the
 global `research/ropa/pool/r10-uk-public.md`. Merge and saturation: `merge.md`.

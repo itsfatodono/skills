@@ -1,6 +1,6 @@
 # privacy-policy: build record
 
-Built 2026-10-26 (Phase 2 pilot). Skeleton: `plugins/fatodono-launchkit/skills/legals/skeletons/privacy-policy.md`.
+Built 2026-10-26 (Phase 2 pilot). Skeleton: `plugins/fatodono-founderkit/skills/legals/skeletons/privacy-policy.md`.
 
 ## Run
 

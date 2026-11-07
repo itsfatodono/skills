@@ -1,0 +1,35 @@
+name: store-shots
+
+on:
+  pull_request:
+    paths:
+      - plugins/fatodono-founderkit/skills/store-shots/**
+      - workshop/store-shots/**
+      - .github/workflows/store-shots.yml
+  push:
+    branches:
+      - main
+      - staging
+    paths:
+      - plugins/fatodono-founderkit/skills/store-shots/**
+      - workshop/store-shots/**
+      - .github/workflows/store-shots.yml
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Engine tests (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: workshop/store-shots
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv run pytest -q

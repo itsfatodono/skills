@@ -1,0 +1,22 @@
+panels:
+  p1:
+    headline: Every note you take, searchable.
+    subline: Find anything you've noted, in seconds.
+  p2:
+    headline: Your notes stay yours.
+    subline: Recognition runs on your device.
+  p3:
+    app_store:
+      headline: On every device you own.
+      subline: The same notes on your iPhone, iPad and Mac.
+    play:
+      headline: On every device you own.
+      subline: The same notes on your phone, tablet and Mac.
+
+badges:
+  offline: Works in airplane mode
+
+# The Play feature graphic: one text per [data-copy] on layout/feature.html.
+feature_graphic:
+  wordmark: example.
+  headline: Every note you take, searchable.

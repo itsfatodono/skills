@@ -1,0 +1,33 @@
+# A small project: one language on both stores, a target per frame kind, and
+# the fake adapter in place of an app. Every key: docs/config.md.
+# `store-shots init` starts every new project from this example's targets,
+# placement and layout: a change here changes what new projects get.
+languages:
+  en: {app_store: en-US, play: en-US}
+
+targets:
+  iphone69: {slot: app_store/iphone_69, size: [1320, 2868]}
+  ipad13: {slot: app_store/ipad_13, size: [2064, 2752]}
+  mac: {slot: app_store/mac, size: [2880, 1800], screen: [2560, 1600]}
+  android_phone: {slot: play/phone, size: [1440, 2560], screen: [1080, 2342]}
+  android_tablet: {slot: play/tablet_10, size: [1800, 3200], screen: [1600, 2440]}
+
+runs_on:
+  app_store: [iphone, ipad, mac]
+  play: [phone, tablet]
+
+banned_phrases:
+  - says: there is no account
+    en: ['(?i)\bno\s+account\b', '(?i)\bwithout\s+an?\s+account\b']
+
+feature_graphic:
+  size: [1024, 500]
+
+# A raw saved as it is, with no frame or copy (an in-app purchase's review
+# screenshot, say): out/unframed/editor.png.
+unframed:
+  editor: {scene: editor, target: iphone69, lang: en}
+
+adapter:
+  command: [uv, run, --quiet, --script, adapter/fake_adapter.py]
+  inputs: [adapter/**]

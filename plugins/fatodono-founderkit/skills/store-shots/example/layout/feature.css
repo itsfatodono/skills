@@ -1,0 +1,20 @@
+/* The example brand on Play's feature graphic: the wordmark over one
+   headline, centred, with two candy blobs at the edges. */
+:root {
+  --ivory: #F8F3EA;
+  --ink: #1B1B1B;
+  --accent: #DF4F4F;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100vw; height: 100vh; overflow: hidden; background: var(--ivory); }
+body { position: relative; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+.blob { position: absolute; border-radius: 50%; }
+.blob-sky { width: 40vw; height: 40vw; right: -11vw; top: -21vw; background: #DEEFFD; }
+.blob-pink { width: 46vw; height: 46vw; right: -14vw; bottom: -26vw; background: #FBE3E9; }
+
+.copy { position: absolute; left: 14vw; right: 14vw; top: 50%; transform: translateY(-50%); text-align: center; }
+.wordmark { font-weight: 700; font-size: 3.6vw; letter-spacing: -.025em; line-height: 1.1; }
+.headline { margin-top: 3.4vh; font-weight: 600; font-size: 7.2vw; line-height: 1.06; letter-spacing: -.035em; }
+.stop { color: var(--accent); }

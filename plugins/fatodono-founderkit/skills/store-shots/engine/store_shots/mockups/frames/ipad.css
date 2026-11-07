@@ -1,0 +1,17 @@
+/* iPad, no camera cutout. A single device takes the store-listing iPad's
+   lengths at a 70vw screen; a cluster member the cluster's multiples. */
+.ss-device[data-kind="ipad"] { --bezel-w: calc(var(--ss-short) * 2.2 / 70); border-radius: calc(var(--ss-short) * 4.6 / 70); }
+.ss-device[data-kind="ipad"] .ss-screen { border-radius: calc(var(--ss-short) * 2.6 / 70); }
+.ss-device[data-kind="ipad"] .ss-status { height: 1.75%; padding: 0 3.2%; }
+.ss-device[data-kind="ipad"] .ss-time { font-size: calc(var(--ss-short) * 1.05 / 70); }
+.ss-device[data-kind="ipad"] .ss-indicators { gap: calc(var(--ss-short) * .6 / 70); }
+.ss-device[data-kind="ipad"] .ss-indicators svg { height: calc(var(--ss-short) * .8 / 70); }
+
+.ss-device.ss-member[data-kind="ipad"] { --bezel-w: calc(var(--ss-short) * .031); border-radius: calc(var(--ss-short) * .066); }
+.ss-device.ss-member[data-kind="ipad"] .ss-screen { border-radius: calc(var(--ss-short) * .037); }
+.ss-device.ss-member[data-kind="ipad"] .ss-time { font-size: calc(var(--ss-short) * .015); }
+.ss-device.ss-member[data-kind="ipad"] .ss-indicators { gap: calc(var(--ss-short) * .0086); }
+.ss-device.ss-member[data-kind="ipad"] .ss-indicators svg { height: calc(var(--ss-short) * .0114); }
+
+/* Landscape: the status bar keeps its portrait height. */
+.ss-device[data-kind="ipad"][data-orientation="landscape"] .ss-status { height: calc(var(--ss-short) * .0233); }

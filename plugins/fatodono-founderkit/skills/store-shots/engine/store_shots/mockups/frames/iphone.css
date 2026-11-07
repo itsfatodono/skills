@@ -1,0 +1,23 @@
+/* iPhone with a Dynamic Island. A single device takes the store-listing
+   iPhone's lengths at a 69vw screen; a cluster member (.ss-member) takes the
+   store-listing cluster's multiples of its screen. */
+.ss-device[data-kind="iphone"] { --bezel-w: calc(var(--ss-short) * 1.67 / 69); border-radius: calc(var(--ss-short) * 11.6 / 69); }
+.ss-device[data-kind="iphone"] .ss-screen { border-radius: calc(var(--ss-short) * 10 / 69); }
+.ss-device[data-kind="iphone"] .ss-status { height: 6.5%; padding: 0 7.5% 0 10.5%; }
+.ss-device[data-kind="iphone"] .ss-time { font-size: calc(var(--ss-short) * 2.75 / 69); }
+.ss-device[data-kind="iphone"] .ss-island { position: absolute; left: 50%; top: calc(var(--ss-short) * 1.76 / 69); width: 28.6%; height: calc(var(--ss-short) * 5.8 / 69); transform: translateX(-50%); background: #000; border-radius: calc(var(--ss-short) * 3 / 69); }
+.ss-device[data-kind="iphone"] .ss-indicators { gap: calc(var(--ss-short) * .93 / 69); }
+.ss-device[data-kind="iphone"] .ss-indicators svg { height: calc(var(--ss-short) * 1.85 / 69); }
+
+.ss-device.ss-member[data-kind="iphone"] { --bezel-w: calc(var(--ss-short) * .024); border-radius: calc(var(--ss-short) * .168); }
+.ss-device.ss-member[data-kind="iphone"] .ss-screen { border-radius: calc(var(--ss-short) * .145); }
+.ss-device.ss-member[data-kind="iphone"] .ss-time { font-size: calc(var(--ss-short) * .04); }
+.ss-device.ss-member[data-kind="iphone"] .ss-island { top: calc(var(--ss-short) * .0255); height: calc(var(--ss-short) * .084); border-radius: calc(var(--ss-short) * .043); }
+.ss-device.ss-member[data-kind="iphone"] .ss-indicators { gap: calc(var(--ss-short) * .0134); }
+.ss-device.ss-member[data-kind="iphone"] .ss-indicators svg { height: calc(var(--ss-short) * .027); }
+
+/* Landscape: iOS shows no status bar on an iPhone held sideways, and the
+   Dynamic Island sits on the left edge. */
+.ss-device[data-kind="iphone"][data-orientation="landscape"] .ss-status { display: none; }
+.ss-device[data-kind="iphone"][data-orientation="landscape"] .ss-island { left: calc(var(--ss-short) * 1.76 / 69); top: 50%; width: calc(var(--ss-short) * 5.8 / 69); height: 28.6%; transform: translateY(-50%); }
+.ss-device.ss-member[data-kind="iphone"][data-orientation="landscape"] .ss-island { left: calc(var(--ss-short) * .0255); width: calc(var(--ss-short) * .084); }

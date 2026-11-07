@@ -1,0 +1,10 @@
+/* A MacBook: a thin black bezel round the app's window and its title bar,
+   the aluminium base under the screen. It has no status bar. */
+.ss-device[data-kind="mac"] { --bezel-w: calc(var(--screen-w) * .018); --bar: calc(var(--screen-w) * .028); height: calc(var(--screen-w) * var(--screen-ratio) + var(--bar) + 2 * var(--bezel-w)); border-radius: calc(var(--screen-w) * .03) calc(var(--screen-w) * .03) 0 0; }
+.ss-device[data-kind="mac"] .ss-screen { border-radius: calc(var(--screen-w) * .008); }
+.ss-device[data-kind="mac"] .ss-titlebar { display: flex; align-items: center; gap: calc(var(--screen-w) * .0062); height: var(--bar); padding-left: calc(var(--screen-w) * .01); background: #EFE9DD; border-bottom: 1px solid #DDD5C4; }
+.ss-device[data-kind="mac"] .ss-titlebar i { width: calc(var(--screen-w) * .0094); height: calc(var(--screen-w) * .0094); border-radius: 50%; background: #FF5F57; }
+.ss-device[data-kind="mac"] .ss-titlebar i:nth-child(2) { background: #FEBC2E; }
+.ss-device[data-kind="mac"] .ss-titlebar i:nth-child(3) { background: #28C840; }
+.ss-device[data-kind="mac"]::after { content: ""; position: absolute; top: 100%; left: -7%; width: 114%; height: calc(var(--screen-w) * .032); background: linear-gradient(#E4E4E7, #B8B8BD); border-radius: 0 0 12% 12% / 0 0 100% 100%; box-shadow: 0 2vw 5vw rgba(27, 27, 27, .18); }
+.ss-device[data-kind="mac"]::before { content: ""; position: absolute; z-index: 1; top: 100%; left: 50%; width: 16%; height: calc(var(--screen-w) * .011); transform: translateX(-50%); background: #A9A9AE; border-radius: 0 0 calc(var(--screen-w) * .012) calc(var(--screen-w) * .012); }

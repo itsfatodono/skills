@@ -5,7 +5,7 @@ Proposal only; nothing under `plugin/` was edited. Written 2026-10-27.
 
 Scope read: `helpers/facts-schema.md` (95 keys), `regions/{eu,uk,us,tr}/facts.md` (5 + 7 + 1 + 16 keys),
 and every `facts.*` reference under `plugin/` (skeletons, region blocks, agents, `SKILL.md`,
-`helpers/catalog.md`, `helpers/grill.md`, `build/`, `formats/`). Paths below are relative to
+`helpers/catalog.md`, `helpers/grilling.md`, `build/`, `formats/`). Paths below are relative to
 `plugins/fatodono-founderkit/skills/legals/` unless they start with `plugin/`.
 
 Test applied: merge only when the two keys would always get the same answer for the same company.
@@ -90,7 +90,7 @@ trim names the side to cut; the owner may prefer the other side.
 **Defined but never referenced: none.** Every key in `helpers/facts-schema.md` and the four region
 `facts.md` files is named somewhere outside its definition. Weakest consumers: `product.category`
 (only `SKILL.md` and `build/build.md`, by design, decision 34) and `users.regions` (no skeleton;
-`SKILL.md`, `helpers/catalog.md`, `helpers/grill.md`, `helpers/doc-checker.md`, format docs).
+`SKILL.md`, `helpers/catalog.md`, `helpers/grilling.md`, `helpers/doc-checker.md`, format docs).
 
 Empty groups: `content` and `registrations` are listed in helpers/facts-schema.md:10 but have no keys.
 `registrations` is the target of `uk.ico_registration`'s proposed name; `content` has no taker.

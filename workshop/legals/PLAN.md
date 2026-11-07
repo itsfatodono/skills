@@ -36,7 +36,7 @@ workshop/legals/                     ← development folder in fatodono/skills
         <name>.md                    ← each subagent's instructions; no harness-specific agent files
         catalog.md                   ← every document: id, family, trigger questions, skeleton path
         facts-schema.md              ← every fact key: question text + where to look in code
-        grill.md                     ← how the user is asked: fact tree, rounds, recommendations
+        grilling.md                  ← how the user is asked: fact tree, rounds, recommendations
         de-slop.md                   ← the line edit slop-editor runs (decision 51)
         need-to-know.md              ← how much a document says; doc-writer and overshare-checker (decision 57)
       formats/
@@ -196,8 +196,8 @@ Numbers are stable because research files cite them; a gap is a decision that no
 33. User runs are small: one `pool-collector` on the user's own field, a first batch of 5 and
     one saturation batch of 5 (`build/build.md` _User run_). The sample is the user's sector
     only, so a full 30-sample pool buys little.
-34. Grill: everything the skill needs from the user (regions, the product's field, which
-    documents, missing facts) is asked by `helpers/grill.md`: look first, ask the frontier of the fact
+34. Grilling: everything the skill needs from the user (regions, the product's field, which
+    documents, missing facts) is asked by `helpers/grilling.md`: look first, ask the frontier of the fact
     tree in rounds, recommendation first. Every message to the user uses plain words, never the
     skill's own terms. The product's field is a fact, `facts.product.category`, which a user
     run's pool samples.

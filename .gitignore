@@ -10,3 +10,8 @@ how/
 
 # Per-product regression rules for workshop/legals/tools/check-overshare; they name real hosts and addresses.
 workshop/legals/tests/local/
+
+# store-shots: what a local build of the example project writes.
+plugins/fatodono-founderkit/skills/store-shots/example/raw/
+plugins/fatodono-founderkit/skills/store-shots/example/out/
+plugins/fatodono-founderkit/skills/store-shots/example/.store-shots/

@@ -1,0 +1,33 @@
+panels:
+  - id: p1
+    claim: Every note can be found by its text.
+    scene: home
+    status: normal
+    evidence:
+      - adapter/fake_adapter.py
+
+  - id: p2
+    claim: Recognition runs on the device, with no network.
+    scene: editor
+    card: editor-card
+    badge: {icon: airplane-mode, copy: offline}
+    status: airplane
+    evidence:
+      - adapter/fake_adapter.py
+
+  # A cluster lists its devices back to front, per store, each with its own
+  # scene; the App Store shows no Android device.
+  - id: p3
+    claim: The same notes open on every device.
+    cluster:
+      app_store:
+        - {frame: mac, scene: everywhere-mac}
+        - {frame: ipad, scene: everywhere-ipad}
+        - {frame: iphone, scene: everywhere-iphone}
+      play:
+        - {frame: mac, scene: everywhere-mac}
+        - {frame: android_tablet, scene: everywhere-android_tablet}
+        - {frame: android_phone, scene: everywhere-android_phone}
+    status: normal
+    evidence:
+      - adapter/fake_adapter.py

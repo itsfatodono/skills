@@ -75,6 +75,27 @@ Writes your app's legal documents from your own code: privacy policy, terms of s
 
 14 of the 72 planned items are ready. The documents are drafts, so have a lawyer read them before you publish.
 
+#### [/store-shots](plugins/fatodono-founderkit/skills/store-shots)
+
+Makes your App Store and Google Play screenshots, plus Play's feature graphic, from your app's real screens. It frames them in device mockups, captions them in each of your languages and checks them against each store's rules. [details](plugins/fatodono-founderkit/skills/store-shots/README.md#what-happens)
+
+- **Simple to use.** Just say what you want; you don't need to learn the steps. [examples](plugins/fatodono-founderkit/skills/store-shots/README.md#run-it)
+- **Claims backed by code.** Each screenshot names the code that makes its claim true, so the listing never promises a feature the app doesn't have.
+- **Small changes stay small.** Every image records what it was made from, so a new headline redoes only that screenshot and an app change re-captures only the screens it touched.
+- **Any platform.** You and your agent write the capture for your app (XCUITest, Paparazzi, a Flutter integration test, Detox, Playwright). `store-shots adapter test` checks it in eight small gates, among them whether it reports cut-off text and whether two runs give the same pixels. [gates](plugins/fatodono-founderkit/skills/store-shots/README.md#how-it-works)
+- **Cut-off translations fail the build.** A translated text cut off on screen stops the build before it reaches a store.
+
+Needs [uv](https://docs.astral.sh/uv/), Google Chrome and the simulators or emulators you capture on.
+
+#### [/brand-naming](plugins/fatodono-founderkit/skills/brand-naming)
+
+Names your app, company, product or feature, or judges the names you already have. [details](plugins/fatodono-founderkit/skills/brand-naming/README.md#modes)
+
+- **Simple to use.** Just say what you need a name for. [examples](plugins/fatodono-founderkit/skills/brand-naming/README.md#run-it)
+- **Strategy before words.** It writes a brief and decides what the name should sound like before it generates anything, and scores candidates against that brief instead of taste.
+- **Volume, not the first dozen.** Hundreds of candidates from separate passes, one of them naming a different product entirely, written to a file you keep.
+- **Honest screening.** Trademark, language and domain checks, each conflict marked verified or unverified. A pre-screen, not trademark clearance.
+
 ### fatodono
 
 The router. Every kit installs it, and it covers all of them.

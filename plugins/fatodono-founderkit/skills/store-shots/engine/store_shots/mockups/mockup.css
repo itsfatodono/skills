@@ -1,0 +1,28 @@
+/* What every device frame shares. --screen-w is the screen width the layout
+   sets on the device; --screen-ratio (height / width) comes from the raw, and
+   data-orientation from that ratio. A phone's or tablet's inside (bezel,
+   radii, status bar) scales with --ss-short, its screen's short side, so a
+   landscape device is the portrait one turned; the Mac's scales with
+   --screen-w. Where the frame sits on the panel is the layout's. One file per
+   frame kind lives in frames/; .ss-member marks a device in a cluster. */
+
+.ss-device { --ss-short: var(--screen-w); }
+.ss-device[data-orientation="landscape"] { --ss-short: calc(var(--screen-w) * var(--screen-ratio)); }
+.ss-device { position: absolute; width: calc(var(--screen-w) + 2 * var(--bezel-w)); height: calc(var(--screen-w) * var(--screen-ratio) + 2 * var(--bezel-w)); background: var(--ss-bezel, #1D1D1F); box-shadow: 0 3vw 8vw rgba(27, 27, 27, .18), inset 0 0 0 .5vw #3A3A3C; }
+.ss-screen { position: absolute; inset: var(--bezel-w); overflow: hidden; background: #000; }
+.ss-raw { display: block; width: 100%; }
+
+/* a closing . ! or ? in [data-stop] copy */
+.stop { color: var(--accent, #DF4F4F); }
+
+/* status bars: the clock is the only text a mockup holds */
+.ss-status { position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; color: var(--ss-status-ink, #1B1B1B); }
+.ss-indicators { display: flex; align-items: center; }
+.ss-indicators svg { fill: currentColor; }
+.ss-status-ios { font-family: -apple-system, "SF Pro Text", sans-serif; }
+.ss-status-ios .ss-time { font-weight: 600; letter-spacing: -.01em; }
+.ss-status-android { font-family: Roboto, "Google Sans", sans-serif; }
+.ss-status-android .ss-time { font-weight: 500; }
+.ss-indicators .ss-airplane { display: none; }
+.ss-device[data-status="airplane"] .ss-airplane { display: block; }
+.ss-device[data-status="airplane"] .ss-signal, .ss-device[data-status="airplane"] .ss-wifi { display: none; }

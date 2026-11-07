@@ -1,0 +1,13 @@
+# Tests only: the engine ships in the plugin and is imported from there.
+[project]
+name = "store-shots-workshop"
+version = "0"
+requires-python = ">=3.11"
+dependencies = ["pillow==13.0.0", "pyyaml==6.0.3", "pytest>=8"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["../../plugins/fatodono-founderkit/skills/store-shots/engine"]

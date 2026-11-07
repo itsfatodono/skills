@@ -1,0 +1,43 @@
+name: store-shots catalog age
+
+# Opens an issue once store-shots' store catalog was last checked against
+# the stores' pages six months ago or more.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  age:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read CHECKED
+        id: catalog
+        run: |
+          checked=$(sed -n 's/^CHECKED = "\(.*\)"$/\1/p' plugins/fatodono-founderkit/skills/store-shots/engine/store_shots/catalog.py)
+          test -n "$checked"
+          echo "checked=$checked" >> "$GITHUB_OUTPUT"
+          if [ "$(date -d "$checked +6 months" +%s)" -le "$(date +%s)" ]; then
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open an issue
+        if: steps.catalog.outputs.stale == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECKED: ${{ steps.catalog.outputs.checked }}
+        run: |
+          title="store-shots: store catalog last checked $CHECKED"
+          if gh issue list --state open --search "\"$title\" in:title" --json number --jq length | grep -qx 0; then
+            gh issue create --title "$title" --body "$(cat <<EOF
+          \`plugins/fatodono-founderkit/skills/store-shots/engine/store_shots/catalog.py\` was last compared with the stores' pages on $CHECKED.
+
+          Compare its slots, sizes, panel maximums, requirements and feature graphic size with each page in its \`SOURCES\`, update what changed, and move \`CHECKED\` to today.
+          EOF
+          )"
+          fi

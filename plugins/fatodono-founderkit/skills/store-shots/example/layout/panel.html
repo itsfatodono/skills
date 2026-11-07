@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- One store screenshot. The engine adds the mockups, the panel's data and
+     the runtime that fills [data-copy], builds the devices in [data-stage]
+     and places every [data-place] from placement.yaml. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div class="blob blob-pink"></div>
+  <div class="blob blob-sky"></div>
+  <header class="copy" data-place="copy">
+    <h1 class="headline" data-place="headline" data-copy="headline" data-stop data-fit-lines="2"></h1>
+    <p class="subline" data-place="subline" data-copy="subline" data-fit-lines="2" data-fit-above></p>
+  </header>
+  <main data-stage></main>
+  <div class="card" data-place="card"><img alt=""></div>
+  <!-- marketing layer, not app UI: icon from icons/, text from copy -->
+  <div class="badge" data-place="badge"><span class="badge-icon" data-icon></span><span data-copy="badge"></span></div>
+</body>
+</html>

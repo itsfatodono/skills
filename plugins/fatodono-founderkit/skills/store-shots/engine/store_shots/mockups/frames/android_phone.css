@@ -1,0 +1,21 @@
+/* A Pixel-like phone with a punch-hole camera. A single device takes the
+   store-listing phone's lengths at a 64vw screen; a cluster member the
+   cluster's multiples. */
+.ss-device[data-kind="android_phone"] { --bezel-w: calc(var(--ss-short) * 1.5 / 64); border-radius: calc(var(--ss-short) * 7.4 / 64); }
+.ss-device[data-kind="android_phone"] .ss-screen { border-radius: calc(var(--ss-short) * 6 / 64); }
+.ss-device[data-kind="android_phone"] .ss-status { height: calc(var(--ss-short) * .0533); padding: 0 5.5%; }
+.ss-device[data-kind="android_phone"] .ss-time { font-size: calc(var(--ss-short) * 2 / 64); }
+.ss-device[data-kind="android_phone"] .ss-camera { position: absolute; left: 50%; top: calc(var(--ss-short) * .0267 - var(--ss-short) * .85 / 64); width: calc(var(--ss-short) * 1.7 / 64); height: calc(var(--ss-short) * 1.7 / 64); transform: translateX(-50%); background: #000; border-radius: 50%; }
+.ss-device[data-kind="android_phone"] .ss-indicators { gap: calc(var(--ss-short) * .8 / 64); }
+.ss-device[data-kind="android_phone"] .ss-indicators svg { height: calc(var(--ss-short) * 1.45 / 64); }
+
+.ss-device.ss-member[data-kind="android_phone"] { --bezel-w: calc(var(--ss-short) * .023); border-radius: calc(var(--ss-short) * .116); }
+.ss-device.ss-member[data-kind="android_phone"] .ss-screen { border-radius: calc(var(--ss-short) * .094); }
+.ss-device.ss-member[data-kind="android_phone"] .ss-time { font-size: calc(var(--ss-short) * .031); }
+.ss-device.ss-member[data-kind="android_phone"] .ss-camera { top: calc(var(--ss-short) * .0134); width: calc(var(--ss-short) * .0266); height: calc(var(--ss-short) * .0266); }
+.ss-device.ss-member[data-kind="android_phone"] .ss-indicators { gap: calc(var(--ss-short) * .0125); }
+.ss-device.ss-member[data-kind="android_phone"] .ss-indicators svg { height: calc(var(--ss-short) * .0227); }
+
+/* Landscape: the status bar stays on top, the camera moves to the left edge. */
+.ss-device[data-kind="android_phone"][data-orientation="landscape"] .ss-camera { left: calc(var(--ss-short) * .0267 - var(--ss-short) * .85 / 64); top: 50%; transform: translateY(-50%); }
+.ss-device.ss-member[data-kind="android_phone"][data-orientation="landscape"] .ss-camera { left: calc(var(--ss-short) * .0134); top: 50%; }

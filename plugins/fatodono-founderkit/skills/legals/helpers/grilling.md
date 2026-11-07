@@ -1,4 +1,4 @@
-# Grill
+# Grilling
 
 How you get anything from the user: where their users are, what the product is, which
 documents it needs, and every fact the code does not show. Adapted from the grilling skill.

@@ -53,7 +53,7 @@ model below: a fast model for `pool-collector` (Sonnet in Claude Code), the stro
    `facts.product.language` (always asked, even when the repo shows it), then the trigger
    question of every row in `helpers/catalog.md` and in the `catalog.md` of each region in
    `facts.users.regions`: from a light look at the repo (store metadata, sign-in, payment SDKs),
-   and what that leaves open by `helpers/grill.md`. Find the product's existing legal
+   and what that leaves open by `helpers/grilling.md`. Find the product's existing legal
    documents (repo, website, store listing links), in any format: each one is patched, not
    replaced, unless the user asks for a rewrite. The result always goes to `legal/<doc-id>.md`;
    the original stays as it is. Warn about a chosen skeleton whose `scanned` date is over 12 months
@@ -68,7 +68,7 @@ model below: a fast model for `pool-collector` (Sonnet in Claude Code), the stro
    `legal/.skeletons/helpers/facts-schema.md` if present), the existing documents and the value of
    `facts.users.regions`.
    Done when `legal/facts.md` has an entry for every key.
-3. **Ask.** Settle every `missing` and `conflict` key by `helpers/grill.md`.
+3. **Ask.** Settle every `missing` and `conflict` key by `helpers/grilling.md`.
    Done when every key still needed is `found` or `answered`.
 4. **Draft.** Dispatch one `doc-writer` per chosen item, all at once. Each dispatch gives the
    skeleton, the region files for that item (`block` or `whole`) of the regions in

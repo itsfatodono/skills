@@ -12,7 +12,7 @@ const pluginsDir = join(repo, "plugins");
 const check = process.argv.includes("--check");
 let drift = false;
 
-for (const name of readdirSync(pluginsDir).sort()) {
+for (const name of readdirSync(pluginsDir, { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name).sort()) {
   const pkgPath = join(pluginsDir, name, "package.json");
   const pluginPath = join(pluginsDir, name, ".claude-plugin", "plugin.json");
   const { version } = JSON.parse(readFileSync(pkgPath, "utf8"));

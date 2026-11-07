@@ -7,9 +7,9 @@
     "plugins/*"
   ],
   "scripts": {
-    "check": "node scripts/check-repo.mjs && node scripts/sync-plugin-versions.mjs --check",
+    "check": "node scripts/check-repo.mjs && node scripts/sync-plugin-versions.mjs --check && node scripts/sync-legals-coverage.mjs --check",
     "changeset": "changeset",
-    "version": "changeset version && node scripts/sync-plugin-versions.mjs"
+    "version": "changeset version && node scripts/sync-plugin-versions.mjs && node scripts/sync-legals-coverage.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.30.0"

@@ -1,0 +1,16 @@
+# Rules for check-overshare that hold for any product. `<max> <regex>`, case-insensitive.
+# From the first syncflash run's overshare (PLAN.md decision 57).
+
+# depth: cookie settings, web security settings, internal components
+0 HttpOnly|SameSite
+0 \bCORS\b
+0 \bepoch\b
+0 workers\.dev
+0 honeypot
+0 \bhash(ed|lenmiş|lenir)?\b|özet değer
+# depth: sign-in and limit mechanics
+0 \b\d+[- ]?(digit|haneli)\b
+0 \b\d+\s+(attempts|deneme)\b
+0 (per|başına)\s+IP|IP\s+(başına|per)
+# surface: admin, console and internal-tool hosts
+0 \b(console|admin|tools|internal|staging)\.[a-z0-9-]+\.[a-z]{2,}

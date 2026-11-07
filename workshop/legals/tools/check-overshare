@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Count overshare in a written legal/ folder: text past need-to-know (PLAN.md decision 57).
+
+A regression check for the write branch, not a replacement for `overshare-checker`: run the skill
+on a product whose facts once produced overshare, then run this on its `legal/` folder.
+
+Each rules file holds one rule per line, `<max> <regex>`: the regex may match at most <max>
+times in each document (case-insensitive). `#` starts a comment.
+
+    0 HttpOnly|SameSite        # cookie settings: never in a document
+    1 Example Mah\\.           # the company address: once, in its contact section
+
+`overshare-generic.txt` beside this script holds rules for any product. Rules naming one
+product's addresses and hosts belong in `workshop/legals/tests/local/`, which git ignores:
+the repo is public.
+
+Usage: workshop/legals/tools/check-overshare <legal-dir> <rules-file>...
+(exit 0 when clean, 1 with a `file: count × rule` list otherwise; `facts.md` and `.`-folders
+are skipped.) Python 3 standard library only.
+"""
+
+import pathlib
+import re
+import sys
+
+
+def rules(path):
+    out = []
+    for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        line = re.sub(r"\s+#.*$|^#.*$", "", line).strip()
+        if not line:
+            continue
+        limit, _, pattern = line.partition(" ")
+        if not limit.isdigit() or not pattern.strip():
+            sys.exit(f"{path}:{n}: expected `<max> <regex>`")
+        out.append((int(limit), pattern.strip(), re.compile(pattern.strip(), re.IGNORECASE)))
+    return out
+
+
+def main():
+    if len(sys.argv) < 3:
+        sys.exit(__doc__.strip().splitlines()[-3])
+    legal = pathlib.Path(sys.argv[1])
+    all_rules = [r for f in sys.argv[2:] for r in rules(pathlib.Path(f))]
+    docs = sorted(p for p in legal.glob("*.md") if p.name != "facts.md")
+    if not docs:
+        sys.exit(f"{legal}: no documents")
+    bad = 0
+    for doc in docs:
+        text = doc.read_text(encoding="utf-8")
+        for limit, pattern, rx in all_rules:
+            count = len(rx.findall(text))
+            if count > limit:
+                bad += 1
+                print(f"{doc.name}: {count} × {pattern} (max {limit})")
+    print(f"check-overshare: {len(docs)} documents, {bad} over the limit")
+    sys.exit(1 if bad else 0)
+
+
+if __name__ == "__main__":
+    main()

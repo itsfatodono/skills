@@ -4,3 +4,9 @@ node_modules/
 # Local Claude Code state, not part of the repo.
 .claude/settings.local.json
 .claude/afk-farmer/
+
+# Personal notes on what to learn from other skill repos. Not shipped, not shared.
+how/
+
+# Per-product regression rules for workshop/legals/tools/check-overshare; they name real hosts and addresses.
+workshop/legals/tests/local/

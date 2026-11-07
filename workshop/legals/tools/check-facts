@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Check that every facts.<group>.<key> named in the legals skill is defined.
+
+A key is defined by a `### facts.<group>.<key>` heading in helpers/facts-schema.md (shared keys) or in
+regions/<code>/facts.md (keys of that region only). Names given as `**Proposed shared key:**`
+in a region facts.md are accepted too: they are announced, not yet promoted.
+
+References resolve as follows:
+- sub-field paths resolve to their key: facts.sales.subscription.auto_renews -> facts.sales.subscription
+- facts.<code>.<key> must be defined in regions/<code>/facts.md
+- facts.<group>.* is accepted when the group has at least one defined key
+- a bare facts.<group> is an error (a group, not a key); `facts.md` is skipped as a file name
+
+Usage: workshop/legals/tools/check-facts [repo-root]   (exit 0 when clean, 1 with a file:line list otherwise)
+Python 3 standard library only.
+"""
+
+import pathlib
+import re
+import sys
+
+ROOT = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else pathlib.Path(__file__).resolve().parents[3])
+SKILL = ROOT / "plugins" / "fatodono-launchkit" / "skills" / "legals"
+SCHEMA = SKILL / "helpers" / "facts-schema.md"
+REGIONS = SKILL / "regions"
+
+# Deliberately undefined example keys, each allowed only in the file that uses it as an example.
+# Keep this list narrow: a key that a skeleton or region block needs belongs in the schema.
+ALLOWLIST = {
+    # build-task.md step 4 illustrates a VERBİS exemption condition with a headcount key, which
+    # waits for a section that names it (PLAN.md decision 29).
+    ("plugins/fatodono-launchkit/skills/legals/build/build-task.md", "facts.company.employees"),
+    # region-format.md shows contributors how a region key is named; there is no `br` region.
+    ("plugins/fatodono-launchkit/skills/legals/formats/region-format.md", "facts.br.encarregado"),
+}
+
+HEADING = re.compile(r"^###\s+`?(facts\.[a-z0-9_]+\.[a-z0-9_]+)`?\s*$")
+PROPOSED = re.compile(r"\*\*Proposed shared key:\*\*\s*`(facts\.[a-z0-9_]+\.[a-z0-9_]+)`")
+# At least group and key; `facts.md`, `facts.<code>.*` placeholders and `facts.*` do not match.
+REF = re.compile(r"(?<![A-Za-z0-9_./-])facts((?:\.[a-z0-9_]+)+(?:\.\*)?)")
+
+
+def definitions(path):
+    keys, proposed = set(), set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = HEADING.match(line)
+        if m:
+            keys.add(m.group(1))
+        proposed.update(PROPOSED.findall(line))
+    return keys, proposed
+
+
+def main():
+    shared, proposed = definitions(SCHEMA)
+    regional = {}
+    for facts_md in sorted(REGIONS.glob("*/facts.md")):
+        code = facts_md.parent.name
+        keys, prop = definitions(facts_md)
+        regional[code] = {k for k in keys if k.split(".")[1] == code}
+        shared_named_in_region = keys - regional[code]
+        if shared_named_in_region:
+            for k in sorted(shared_named_in_region):
+                print(f"{facts_md.relative_to(ROOT)}: defines {k}, which is not a facts.{code}.* key")
+            return 1
+        proposed |= prop
+
+    groups = {k.split(".")[1] for k in shared} | {c for c, ks in regional.items() if ks}
+
+    def defined(ref):
+        parts = ref.split(".")
+        group = parts[1]
+        if len(parts) < 3:
+            return False
+        if parts[2] == "*":
+            return group in groups
+        key = ".".join(parts[:3])
+        if key in proposed:
+            return True
+        if group in regional:
+            return key in regional[group]
+        return key in shared
+
+    errors = []
+    for path in sorted(SKILL.rglob("*")):
+        if not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        rel = path.relative_to(ROOT).as_posix()
+        for lineno, line in enumerate(text.splitlines(), 1):
+            for m in REF.finditer(line):
+                tail = m.group(1)
+                ref = "facts" + tail
+                if ref == "facts.md":
+                    continue  # the file name, not a key
+                if defined(ref) or (rel, ref) in ALLOWLIST:
+                    continue
+                errors.append(f"{rel}:{lineno}: {ref}")
+
+    for e in errors:
+        print(e)
+    if errors:
+        print(f"{len(errors)} undefined fact key reference(s)", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

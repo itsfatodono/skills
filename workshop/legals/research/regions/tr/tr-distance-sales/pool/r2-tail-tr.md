@@ -1,0 +1,22 @@
+| Company | App | Store id | Genre | Ratings or downloads | Document URL | Developer site |
+|---|---|---|---|---|---|---|
+| Quka Yazilim Sanayi Ve Ticaret Anonim Sirketi | NonaButik | 1513824851 | Shopping | 34 ratings (App Store) | https://www.nonabutik.com/mesafeli-satis-sozlesmesi | https://www.nonabutik.com |
+| Pelin Senoglu Ticaret Butik Tekstil Limited Sirketi | Pelin Şenoğlu | 6446483138 | Shopping | 25 ratings (App Store) | https://www.pelinsenoglu.com/mesafeli-satis-sozlesmesi/ | https://www.pelinsenoglu.com/about-us/ |
+| Pakkod Yazilim Ve Danismanlik Limited Sirketi | Happinessİst | 6787659777 | Shopping | 4 ratings (App Store) | https://happinessistanbul.com/mesafeli-satis-sozlesmesi | https://happinessistanbul.com |
+| Webruz Bilisim Ve Ajans Hizmetleri Ticaret Limited Sirketi | Byarslan | 6756940599 | Shopping | 0 ratings (App Store) | https://byarslan.com/mesafeli-satis-sozlesmesi | https://byarslan.com/ |
+| Evvahe Dogal Kozmetik Gida Tekstil Imalat Ithalat Ve Ihracat Sanayi Ve Ticaret Limited Sirketi | Evvahe Doğal | 6764330631 | Shopping | 12 ratings (App Store) | https://evvahedogal.com/satis-sozlesmesi (combined) | https://evvahedogal.com/ |
+| Ferda Uslu Dogal Kozmetik Ve Gida Urunleri Sanayi Dis Ticaret Anonim Sirketi | Fermente Mutfağım | 1493265214 | Shopping | 887 ratings (App Store) | https://www.fermentemutfagim.com/satis-sozlesmesi (combined) | https://www.fermentemutfagim.com/kisisel-verilerin-korunmasi |
+| Glohe Dogal Urunler Kozmetik Pazarlama Anonim Sirketi | Siveno | 6743438285 | Shopping | 5 ratings (App Store) | https://siveno.com/satis-sozlesmesi (combined) | http://siveno.com |
+| Yuddy Teknoloji Anonim Sirketi | Lenaderm | 6752878258 | Shopping | 0 ratings (App Store) | https://lenaderm.com/pages/mesafeli-satis-sozlesmesi | https://lenaderm.com/ (ikas) |
+| Nil Evcil Hayvan Urunleri Pazarlama Sanayi Ve Ticaret Limited Sirketi | Patime Gelsin Market | 1596258781 | Shopping | 55 ratings (App Store) | https://patimegelsin.com/mesafeli_satis_sozlesmesi.html | https://patimegelsin.com/ |
+| Ikizleryem Evcil Hayvan Urunleri Sanayi Ve Ticaret Limited Sirketi | İkizler Yem | 6756481014 | Shopping | 25 ratings (App Store) | https://www.ikizleryem.com/mesafeli-satis-sozlesmesi | https://www.ikizleryem.com (Ticimax) |
+| Doratek Gida Hayvancilik Turizm Tekstil Bilgisayar Elektronik Kirtasiye Reklam San Ltd Sti | Kolaymama | 1164892235 | Shopping | 1846 ratings (App Store) | https://www.kolaymama.com/satis-sozlesmesi.shtm | https://www.kolaymama.com/ |
+| Lab Kahve Unlu Mamuller Imalat Sanayi Ve Ticaret Limited Sirketi | Coffee LAB | 6740917575 | Food & Drink | 12 ratings (App Store) | https://coffeelab.com.tr/mesafeli-satis-sozlesmesi/ | https://coffeelab.com.tr/iletisim/ |
+| Kitapsec Yayincilik Elektronik Nakliye Makina Insaast Taahhut Sanayi Ve Ticaret Ltd Sti | Kitap Seç | 1445690338 | Shopping | 545 ratings (App Store) | https://www.kitapsec.com/Konu/Mesafeli-Satis-Sozlesmesi.html | http://www.kitapsec.com/ |
+| Aperatif Kitap Yayin Dagitim Ve Ticaret Anonim Sirketi | Ucuzkitapal | 1659017411 | Shopping | 37 ratings (App Store) | https://www.ucuzkitapal.com/mesafeli-satis-sozlesmesi/ | https://www.ucuzkitapal.com/ |
+| Aslanoba Gida Sanayi Ve Ticaret A S | Organik Pazar | 6449093856 | Shopping | 5 ratings (App Store) | https://www.organikpazar.com/sayfa/mesafeli-satis-sozlesmesi | https://www.organikpazar.com/ (IdeaSoft) |
+| Kolay Siparis Teknoloji Yazilim Sanayi Ve Ticaret Limited Sirketi | Antalya Organik | 6758433103 | Shopping | 0 ratings (App Store) | https://antalyaorganik.com/blog/yasal/mesafeli-satis-sozlesmesi | https://antalyaorganik.com/ |
+| Sutis Restoran Isletmeleri Turizm Sanayi Ve Ticaret Anonim Sirketi | Sütiş Çiftliği | 1538793505 | Shopping | 52 ratings (App Store) | https://shop.sutis.com.tr/pages/mesafeli-satis-sozlesmesi | https://shop.sutis.com.tr (ikas) |
+| Kmk Bilgi Teknolojileri Anonim Sirketi | Kaybio | 6590620129 | Shopping | 0 ratings (App Store) | https://www.kaybio.com/mesafeli-satis-sozlesmesi | https://www.kaybio.com |
+| Nota Cicek Satis Ve Ticaret Anonim Sirketi | Bambu Çiçek - Çiçek Siparişi | 6755948385 | Shopping | 1118 ratings (App Store) | https://www.bambucicek.com/s/mesafeli-satis-sozlesmesi | https://www.bambucicek.com |
+| Arslan Bilgi Teknolojileri Limited Sirketi | Türkiye Çicek | 1549735032 | Shopping | 0 ratings (App Store) | https://www.turkiyecicek.com/cicek-hakkinda-hersey/21/mesafeli-satis-sozlesmesi | https://www.turkiyecicek.com/ |

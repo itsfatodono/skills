@@ -108,7 +108,7 @@ languages they publish in, carry each document into the site or app in its own f
 
 The method is `build/build.md`; it routes forms, templates and tasks to their own build files.
 You run the build yourself and dispatch its collectors and extractors directly. Never hand the
-whole build to a subagent: subagents cannot start subagents.
+whole build to a subagent: in some harnesses subagents cannot start subagents.
 
 Before a build, check in: in two or three plain sentences, say which document you have no model
 for, how you will research it, what it costs and where the result goes; then wait for an okay.

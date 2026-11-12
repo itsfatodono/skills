@@ -1,7 +1,7 @@
 # legals
 
-Built for startups and solo developers who need their app's legal documents, before launch or long after it. The 14 items
-ready today are distilled from about 360 real companies' documents; the target is about 2100
+Built for startups and solo developers who need their app's legal documents, before launch or long after it. The 17 items
+ready today are distilled from about 430 real companies' documents; the target is about 2100
 across all 72 items. Feel free to contribute.
 
 ## What it does
@@ -105,8 +105,8 @@ the documents you already have.
 
 ## What it writes today
 
-`legals` aims to cover 72 items: 47 documents, 12 forms, 1 template and 12 tasks. 14 are
-ready; the other 58 are waiting for my weekly usage limit to reset.
+`legals` aims to cover 72 items: 47 documents, 12 forms, 1 template and 12 tasks. 17 are
+ready; the other 55 are waiting for my weekly usage limit to reset.
 
 Every document has a global part that works anywhere. A region adds what its laws require.
 
@@ -127,6 +127,9 @@ Every document has a global part that works anywhere. A region adds what its law
 | Open Source Notices | ✅ |  |  |  |  | 2026-10-27 |
 | Data Subject Request Form | ✅ | ✅ | ✅ | ✅ | ✅ | 2026-10-27 |
 | Record of Processing Activities | ✅ | ✅ |  | ✅ |  | 2026-10-27 |
+| Founders' / Shareholders' Agreement | ✅ |  |  |  |  | 2026-11-12 |
+| IP Assignment for founders and employees | ✅ |  |  |  |  | 2026-11-12 |
+| Freelancer / Contractor Agreement | ✅ |  |  |  |  | 2026-11-12 |
 | Mesafeli Satış Sözleşmesi |  |  | ✅ |  |  | 2026-10-26 |
 | Ön Bilgilendirme Formu |  |  | ✅ |  |  | 2026-10-27 |
 | KVKK Aydınlatma Metni |  |  | ✅ |  |  | 2026-10-27 |
@@ -268,12 +271,9 @@ publishes a filled one).
 **J. Company and intellectual property**
 
 <details>
-<summary>Not built yet (7)</summary>
+<summary>Not built yet (4)</summary>
 
 - Incorporation documents and tax registration — task
-- Founder Agreement / shareholders' agreement
-- IP Assignment (founders and employees)
-- Freelancer / contractor agreements
 - Employee privacy notice (KVKK)
 - Trademark registration (TÜRKPATENT, EUIPO, USPTO) — task
 - Domain and brand usage guidelines

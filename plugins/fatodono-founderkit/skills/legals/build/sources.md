@@ -121,8 +121,8 @@ Alternative sources count as samples on these terms:
 | 21 breach procedure, 23 InfoSec policy | R10 universities and public bodies, R11 SANS | ≥20 |
 | 62 Order Form | R9 Common Paper and Bonterms cover pages, R8 `"Order Form"`, R4 sample order forms | <20 |
 | 67 NDA | R9 (Common Paper, Bonterms, oneNDA, Cooley GO, NVCA), university mutual CDAs (`"mutual CDA" site:edu`), R8 | ~20 |
-| 69 Founder / shareholders' agreement | R8 stockholders' and voting agreements, R9 NVCA voting agreement, UK Private Capital shareholders' agreement | <20; founders' collaboration agreements have no reputable public model |
-| 70 IP assignment | R8 `"Proprietary Information and Inventions"` (hundreds of 10-K hits), R9 Cooley GO CIIAA | ≥20 |
+| 69 Founders' / shareholders' agreement | R8 stockholders', shareholders' and voting agreements (EX-4, EX-9 and EX-10 exhibits), R9 SVCA founders' agreement, Seedcamp founder collaboration agreement, StartupTools shareholders' agreement, NVCA voting agreement, UK Private Capital shareholders' agreement (member login; use Wayback) | ≥20 |
+| 70 IP assignment | R8 `"Proprietary Information and Inventions"` (hundreds of 10-K hits); R9 has no fetchable form (Cooley GO's CIIAA is a generator behind a bot wall) | ≥20 |
 | 71 contractor agreements | R8 `"Consulting Agreement"`, R9 Common Paper Independent Contractor Agreement and PSA, Bonterms PSA | ≥20 |
 | 72 employee notice | R10 university staff notices, plus R4 career pages ("candidate privacy notice") | ≥20 |
 

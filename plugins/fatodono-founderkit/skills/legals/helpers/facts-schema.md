@@ -7,7 +7,7 @@ branch adds keys here; the write branch reads them.
 ## Keys
 
 A key is `facts.<group>.<name>` in snake_case. Groups: `company`, `product`, `data`,
-`processors`, `sales`, `users`, `marketing`, `registrations`. Reuse a key whenever
+`processors`, `sales`, `users`, `marketing`, `registrations`, `contractor`. Reuse a key whenever
 the meaning matches, even if the wording in a skeleton differs. Keys only one region uses are
 `facts.<code>.<name>` in `regions/<code>/facts.md` (`formats/region-format.md`), never here.
 
@@ -1030,3 +1030,372 @@ always asked.
   controllers in Turkey with fewer than 50 staff and a small annual balance sheet are usually
   exempt unless their main activity is processing special-category data; controllers outside
   Turkey are not exempt on that ground.
+
+## Company contract keys
+
+Facts about the company that every agreement it signs (with a contractor, a founder, an IP
+assignor) names. Added by the `contractor-agreement` build; other contract skeletons reuse them.
+
+### facts.company.entity_form
+- **Means:** the company's legal form and where it is registered, as a contract names it in the
+  preamble ("a Delaware corporation", "a private limited company registered in England and
+  Wales"), with its registration number where its law expects one.
+- **Type:** record (form: string, registered_in: string, registration_number: string or none)
+- **Look:** existing contracts and legal docs; incorporation documents in the repo; the company
+  footer or imprint. Usually not in code.
+- **Ask:** "What is the company's legal form and where is it registered (for example, a Delaware
+  corporation, a private limited company in England and Wales, an A.Ş. in Istanbul)?" Recommend the form and place in the incorporation documents or the imprint.
+
+### facts.company.contract_law
+- **Means:** the law and courts the company chooses for its own business agreements (with
+  contractors, founders, partners), and whether disputes go to court or to arbitration, with an
+  informal step first. Separate from `facts.company.governing_law`, which governs the user terms.
+- **Type:** record (law: country or state, courts: city or district, forum: enum [courts, arbitration], informal_first: bool)
+- **Look:** existing contracts. Not in code. The user decides.
+- **Ask:** "Which law should govern your agreements with contractors and partners, and which
+  city's courts should hear disputes?" Recommend the law and courts of the company's seat
+  (`facts.company.country`, `facts.company.address`), courts rather than arbitration, with a
+  short good-faith talk first.
+
+### facts.company.signatory
+- **Means:** the person who signs agreements for the company, with their title.
+- **Type:** record (name: string, title: string)
+- **Look:** existing contracts; founders or officers named in incorporation documents. Not in
+  code.
+- **Ask:** "Who signs agreements for the company, and with what title?" Recommend the founder or
+  director who runs the company.
+
+## Contractor keys
+
+One engagement with one freelancer, consultant or contracting firm. Every key here is a choice or
+a fact of the deal, so the scan writes each as `missing` with what it saw in the *Hint*, and the
+user is always asked. A user who engages several contractors keeps one set per contractor.
+
+### facts.contractor.party
+- **Means:** who the contractor is: an individual or a firm, its legal name and form, address
+  and country, the email for notices, and, for a firm, the person who will do the work.
+- **Type:** record (kind: enum [individual, firm], name: string, form: string or none, address: string, country: string (ISO 3166-1 alpha-2), notice_email: string, performer: string or none)
+- **Look:** Not in code. The user decides.
+- **Ask:** "Who are you engaging: a person working on their own account, or a company? Give their
+  legal name, address and email, and for a company, the person who will do the work." Recommend
+  naming the performer whenever the contractor is a firm.
+
+### facts.contractor.services
+- **Means:** what the contractor will do: the services, the deliverables if any, whether the
+  company accepts deliverables before they count as done, and how work is ordered (one project,
+  an ongoing role, or a master agreement with statements of work).
+- **Type:** record (description: string, deliverables: list of (item, due) or none, acceptance: bool, structure: enum [single-project, ongoing, master-with-sows])
+- **Look:** Not in code. The user decides. Project briefs or issue trackers in the repo may hint
+  at the scope.
+- **Ask:** "What will the contractor do, and what will they hand over? Is it one project, an
+  ongoing role, or a series of projects?" Recommend listing deliverables with due dates for
+  project work, and acceptance for deliverables the company has to test.
+
+### facts.contractor.work_arrangements
+- **Means:** how the work runs: the expected time (hours or days, or "as needed"), where it is
+  done, the company's contact person, how often the contractor reports, who supplies tools and
+  equipment, and what the company must supply (access, content, feedback).
+- **Type:** record (time: string or none, place: enum [remote, on-site, mixed], contact: string, reporting: string or none, tools: enum [contractor, company, mixed], company_inputs: list of string)
+- **Look:** Not in code. The user decides.
+- **Ask:** "Roughly how much of their time do you expect, where will they work, who is their
+  contact, and what do you need to give them to do the job?" Recommend remote work on the
+  contractor's own tools, with one named contact.
+
+### facts.contractor.fees
+- **Means:** what the contractor is paid and on what basis, in which currency, with any cap on
+  billable time or total, and any equity granted.
+- **Type:** record (basis: enum [hourly, daily, fixed, retainer, milestone, equity, mixed], amount: string, currency: string (ISO 4217), cap: string or none, equity: string or none)
+- **Look:** Not in code. The user decides.
+- **Ask:** "How will you pay them: by the hour or day, a fixed price, a monthly retainer, or by
+  milestone? How much, in which currency, and is there a cap?" Recommend a cap on billable hours
+  for hourly work. Equity for a contractor needs a lawyer's advice, so recommend cash.
+
+### facts.contractor.payment_terms
+- **Means:** how money moves: invoice cadence and content, days to pay after an invoice, method,
+  any deposit, and late-payment interest.
+- **Type:** record (invoicing: string, payment_days: number, method: string, deposit: string or none, late_interest: string or none)
+- **Look:** Not in code. The user decides; invoicing tools the company already uses may hint at
+  the method.
+- **Ask:** "How often will they invoice, and how many days do you take to pay?" Recommend
+  monthly invoices (or one per milestone), paid within 30 days by bank transfer.
+
+### facts.contractor.expenses
+- **Means:** whether the company reimburses the contractor's expenses, which ones, above what
+  amount prior approval is needed, and what proof is required.
+- **Type:** record (reimbursed: bool, approval_above: string or none, proof: string or none)
+- **Look:** Not in code. The user decides.
+- **Ask:** "Will you pay their expenses (travel, software, stock assets)? Above what amount must
+  they ask first?" Recommend reimbursing only expenses approved in writing in advance, against
+  receipts.
+
+### facts.contractor.term
+- **Means:** when the engagement starts and ends: a start date, and either an end date, the end
+  of the project, or no end date until either side ends it; any renewal.
+- **Type:** record (start: date, end: enum [fixed-date, on-completion, open-ended], end_date: date or none, renewal: string or none)
+- **Look:** Not in code. The user decides.
+- **Ask:** "When does the work start, and when should the agreement end?" Recommend ending on
+  completion for project work, and open-ended with notice for an ongoing role.
+
+### facts.contractor.termination
+- **Means:** how either side can end the engagement early: whether either may end it for
+  convenience and on how many days' notice, the cure period for a breach, and what is paid on
+  termination.
+- **Type:** record (convenience: enum [either, company-only, none], notice_days: number or none, cure_days: number or none, pay_on_termination: string)
+- **Look:** Not in code. The user decides.
+- **Ask:** "Can either of you end it early without a reason, and with how much notice?"
+  Recommend either side on 14 to 30 days' written notice, a cure period for breaches, and payment
+  for work done up to the end.
+
+### facts.contractor.ip_terms
+- **Means:** who owns what the contractor creates: assigned to the company, licensed to it, or
+  kept by the contractor; whether the contractor will build its own pre-existing materials,
+  third-party or open-source components into the deliverables; whether a waiver of moral rights
+  is wanted; and whether these terms sit in the agreement or in a separate IP assignment.
+- **Type:** record (ownership: enum [assigned, licensed, contractor-keeps], background_materials: bool, third_party_components: bool, moral_rights_waiver: bool, placement: enum [in-agreement, separate-assignment])
+- **Look:** Not in code. The user decides. A repo the contractor will commit to shows whether
+  open-source components are likely.
+- **Ask:** "Should the company own everything they make for you? Will they reuse their own code,
+  designs or templates, or open-source parts?" Recommend assignment to the company for work made
+  for the product, a licence for the contractor's pre-existing materials, and the terms in the
+  agreement itself.
+
+### facts.contractor.confidentiality
+- **Means:** what the confidentiality duty covers: one-way (the company's information) or
+  mutual, how long it lasts, and whether an NDA is already signed.
+- **Type:** record (direction: enum [one-way, mutual], years_after: number or none, existing_nda: bool)
+- **Look:** existing NDAs in the company's records. Not in code.
+- **Ask:** "Should only the contractor keep things confidential, or both of you? Have you already
+  signed an NDA?" Recommend one-way, lasting a set number of years after the engagement and
+  without end for trade secrets.
+
+### facts.contractor.restrictions
+- **Means:** limits on the contractor beyond confidentiality: not soliciting the company's staff
+  or customers, not working for competitors during the engagement, not disparaging the company,
+  each with how long it lasts after the end.
+- **Type:** list of (restriction: enum [non-solicit-staff, non-solicit-customers, no-competing-work, non-disparagement], months_after: number or none)
+- **Look:** Not in code. The user decides.
+- **Ask:** "Do you want any limits beyond confidentiality, such as not poaching your staff?"
+  Recommend none, or a staff non-solicit only; limits on whom a contractor may work for can
+  undermine their independent status.
+
+### facts.contractor.subcontracting
+- **Means:** whether the contractor may hand work to others (subcontractors, its own staff).
+- **Type:** enum [not-allowed, with-consent, allowed]
+- **Look:** Not in code. The user decides.
+- **Ask:** "May they hand part of the work to someone else?" Recommend only with your written
+  consent, the contractor staying responsible.
+
+### facts.contractor.liability
+- **Means:** the limits on each side's liability under the agreement: whether indirect damages
+  are excluded, a cap and its basis, whom the limits protect, and which indemnities each side
+  gives.
+- **Type:** record (exclude_indirect: bool, cap: enum [fees-paid, fees-12-months, fixed, none], cap_amount: string or none, protects: enum [both, contractor, company], indemnities_by_contractor: list of enum [ip-infringement, breach, negligence, taxes], indemnities_by_company: list of enum [company-materials, negligence])
+- **Look:** Not in code. The user decides.
+- **Ask:** "Should either side's liability be capped, for example at the fees paid? Should the
+  contractor cover you if their work infringes someone's rights?" Recommend a mutual cap at the
+  fees paid, indirect damages excluded both ways, and an IP-infringement indemnity from the
+  contractor kept outside the cap.
+
+### facts.contractor.insurance
+- **Means:** insurance the contractor must carry (professional liability, general liability),
+  with amounts, if any.
+- **Type:** list of (type: string, amount: string) or none
+- **Look:** Not in code. The user decides.
+- **Ask:** "Should they carry insurance, such as professional liability?" Recommend none for a
+  small engagement unless a customer contract requires it.
+
+### facts.contractor.data_access
+- **Means:** what the contractor will reach: none of the company's systems, its systems or code,
+  or personal data of users or staff.
+- **Type:** enum [none, systems, personal-data]
+- **Look:** Not in code; the user decides. Admin roles, deploy keys or database access to be
+  granted are hints. When personal data is reached, the contractor is a processor
+  (`facts.processors.list`).
+- **Ask:** "Will they get access to your systems, code or user data?" Recommend the least access
+  the work needs.
+
+### facts.contractor.portfolio_use
+- **Means:** whether the contractor may name the company or show the work (in a portfolio, case
+  study or client list), and on what condition.
+- **Type:** enum [not-allowed, with-approval, after-launch, allowed]
+- **Look:** Not in code. The user decides.
+- **Ask:** "May they show this work in their portfolio or name you as a client?" Recommend
+  with your approval, and never before the work is public.
+
+### facts.contractor.prior_work
+- **Means:** whether the contractor started work before the agreement is signed, and from when,
+  so the agreement covers that work too.
+- **Type:** record (started_before: bool, since: date or none)
+- **Look:** Not in code; commit history by the contractor before the start date is a hint.
+- **Ask:** "Did they already start working for you before signing?" Recommend covering the earlier
+  work in the agreement when they did.
+
+## Team keys
+
+The people who build the company and what the company's agreements with them bind them to. Used by
+the IP assignment; a founder or employment document may reuse them.
+
+### facts.company.founders
+- **Means:** the people who founded the company, each with their full legal name and role.
+- **Type:** list of (name: string, role: string)
+- **Look:** incorporation documents or a cap table in the repo; the README or about page; the
+  authors of the repository's earliest commits. Not reliably in code.
+- **Ask:** "Who founded the company? Give each founder's full legal name and role." Recommend the
+  names in the incorporation documents.
+
+### facts.company.founder_prior_work
+- **Means:** what each founder made for the business before the company existed or before they
+  signed with it (code, designs, content, the domain, store or social accounts, the name and logo,
+  patent filings); for each founder, whether it is already assigned to the company, and what the
+  founder gets for assigning it.
+- **Type:** list of (founder: string, items: list of (kind: enum [code, design, content, domain,
+  account, brand, patent, other], description: string), already_assigned: bool, consideration:
+  enum [shares, nominal-sum, none], consideration_detail: string or none)
+- **Look:** repository history from before the incorporation date (first commits, a repository
+  first held under a founder's personal account); domains, developer and store accounts registered
+  to a person; patent filings in a founder's name. The user decides what is listed.
+- **Ask:** "Before the company existed, did a founder build things it now uses: code, designs, the
+  domain, app-store or social accounts, the name or logo, a patent filing? Has each been formally
+  assigned to the company, and what does the founder get for it?" Recommend listing what the
+  repository history shows, with the founder shares as the consideration when founders hold them;
+  "none" only when the company existed before any work began.
+
+### facts.company.ip_signers
+- **Means:** who signs the company's invention assignment and confidentiality agreement: founders
+  (for their work from now on), employees, contractors whose own agreement leaves IP to a separate
+  assignment, advisors.
+- **Type:** list of enum [founders, employees, contractors, advisors]
+- **Look:** team or careers pages; payroll or HR integrations; repository contributors who are not
+  founders; `facts.contractor.ip_terms` (`placement: separate-assignment`). Not reliably in code.
+  The user decides.
+- **Ask:** "Who should sign the IP and confidentiality agreement: founders, employees, contractors,
+  advisors?" Recommend founders and everyone who writes code, designs or content for the company.
+
+### facts.company.business_scope
+- **Means:** the company's business now and as planned, in a sentence or two. The agreement uses it
+  to say which inventions relate to the business and what the covenants protect.
+- **Type:** string
+- **Look:** README, store description, the website's about page, `facts.product.category`; roadmap
+  files or feature flags for planned lines.
+- **Ask:** "In a sentence or two, what is the company's business now, and what does it plan to do
+  next?" Recommend the product description plus any planned line the repository shows.
+
+### facts.company.staff_locations
+- **Means:** the countries, and inside the US the states, where the people who sign the company's
+  agreements with its team live and work. Their local law decides which invention, confidentiality
+  and covenant rules apply.
+- **Type:** list of (country: string (ISO 3166-1 alpha-2), region: string or none)
+- **Look:** Not in code; a payroll or HR tool's settings, the team page.
+- **Ask:** "Where do your founders, employees and contractors live and work? Name the country, and
+  the state for anyone in the US." Recommend the company's country (`facts.company.country`).
+
+### facts.company.staff_restrictions
+- **Means:** what the agreement bars signers from beyond confidentiality: recruiting the company's
+  staff, soliciting its customers or partners, competing, disparaging the company; each with how
+  long it runs after the person leaves and, for a non-compete, where.
+- **Type:** list of (restriction: enum [non-solicit-staff, non-solicit-customers, non-compete,
+  non-disparagement], months_after: number or none, area: string or none)
+- **Look:** existing agreements. Not in code. The user decides.
+- **Ask:** "Beyond confidentiality, should signers agree not to recruit your staff, not to solicit
+  your customers, not to compete, or not to disparage the company after they leave? For how many
+  months?" Recommend a staff non-solicit for 12 months where the signers' law allows one (California, for
+  one, voids it) and nothing more. No non-compete unless a
+  lawyer where each signer works confirms it holds there: many places ban or limit them.
+
+## Ownership keys
+
+How the owners of the company hold, run and leave it. Added by the `shareholders-agreement` build; a
+shareholders' agreement, a cap table note or an investment document may reuse them. The founders
+themselves are `facts.company.founders`.
+
+### facts.company.share_structure
+- **Means:** who holds the company's shares and on what terms: the share classes and what each
+  carries, every holder (founders, investors, employees, advisors) with their holding and what they
+  paid, the employee option pool, and each holder's address for notices.
+- **Type:** record (classes: list of (name: string, rights: string), holders: list of (name: string,
+  kind: enum [founder, investor, employee, advisor, other], class: string, holding: string, paid:
+  string or none, notice_contact: string), option_pool: string or none)
+- **Look:** incorporation documents, a cap table, SAFE or convertible-note documents and existing
+  shareholder agreements in the repo. Not in code.
+- **Ask:** "Who owns the company today, in which share class, and how much did each holder pay? Is
+  there an option pool for employees?" Recommend the split in the incorporation documents; when
+  there are no investors yet, one class of ordinary shares held by the founders.
+
+### facts.company.founder_commitment
+- **Means:** what each founder gives the company besides money for shares: time, how they are
+  engaged, what they are paid, and any cash, loan or asset they bring.
+- **Type:** list of (founder: string, time: enum [full-time, part-time, none], engagement: enum
+  [employee, contractor, director-only, none], pay: string or none, contribution: string or none)
+- **Look:** not in code; payroll or contractor tools' settings show who is paid. The user decides.
+- **Ask:** "For each founder: full-time or part-time, employed or contracting with the company, what
+  pay, and anything they bring besides work (cash, a loan, equipment)?" Recommend full-time for
+  every founder who holds a working founder's share, with the employment or service contract signed
+  separately.
+
+### facts.company.founder_vesting
+- **Means:** whether founder shares vest, on what schedule, and what a founder who leaves keeps:
+  who counts as a good or bad leaver, and the price the company or the other founders pay for the
+  shares the leaver must give up.
+- **Type:** record (applies: bool, months: number, cliff_months: number, frequency: enum [monthly,
+  quarterly, annual], acceleration: enum [none, on-sale, on-sale-and-dismissal], bad_leaver: list
+  of string, unvested_price: enum [nominal, cost, fair-value], bad_leaver_vested_price: enum [kept,
+  cost, fair-value, discount])
+- **Look:** existing founder or stock purchase agreements. Not in code. The user decides.
+- **Ask:** "Should founder shares vest, so that a founder who leaves early gives some back? Over how
+  long, with what cliff? Who counts as a bad leaver, and at what price are shares bought back?"
+  Recommend vesting over 48 months with a 12-month cliff and monthly vesting after it (a common
+  market default, not a legal requirement; 36 months and a 6-month cliff are also usual), unvested
+  shares bought back at what the founder paid, and vested shares kept by a good leaver; the bad
+  leaver list limited to resigning within the cliff, dismissal for cause and breach of the
+  covenants.
+
+### facts.company.board
+- **Means:** the board: how many directors, who appoints and removes each, who chairs, whether
+  the chair has a casting vote, and any observers.
+- **Type:** record (size: number, appointments: list of (appointer: string, seats: number),
+  chair: string or none, casting_vote: bool, observers: list of string)
+- **Look:** incorporation documents and the articles; existing agreements. Not in code.
+- **Ask:** "How many directors should the board have, and who appoints them? Should the chair have
+  a casting vote?" Recommend one director per founder while the founder holds shares, and no
+  casting vote when the founders hold equal stakes.
+
+### facts.company.decision_rules
+- **Means:** how the board's and the shareholders' decisions pass, which decisions need every
+  founder's consent (or a named holder's), and what happens when the owners deadlock.
+- **Type:** record (board_majority: string, shareholder_majority: string, reserved_matters: list of
+  string, reserved_threshold: enum [unanimous, founder-majority, special-majority, named-holder],
+  deadlock: list of enum [escalation, mediation, buy-sell, winding-up], in the order the steps
+  run; empty when the agreement has no deadlock clause)
+- **Look:** the articles and existing agreements. Not in code. The user decides.
+- **Ask:** "Which decisions should need every founder's agreement (new shares, selling the company,
+  large borrowing, changing the business, founders' pay)? If the founders cannot agree, what
+  happens?" Recommend simple majorities for everything else, a short reserved list needing all
+  founders, and for founders with equal stakes an escalation step, then mediation; a buy-sell
+  (shotgun) only on a lawyer's advice, since it favours the founder with more money.
+
+### facts.company.share_transfer_rules
+- **Means:** the limits on founders and other holders selling, giving or pledging shares: a lock-in
+  period, transfers allowed without consent, first refusal for the others, a tag-along, the
+  drag-along threshold, and pre-emption on new shares.
+- **Type:** record (lock_in_months: number or none, permitted_transferees: list of enum [family,
+  family-trust, holding-company, affiliate], rofr: enum [none, company-first, holders-only],
+  tag_along: bool, drag_threshold: string or none, pre_emption: bool)
+- **Look:** the articles and existing agreements. Not in code. The user decides.
+- **Ask:** "Can a founder sell or give away shares? Should the others have first refusal, the right
+  to join a sale, or be able to force a sale of the whole company once enough holders agree? Do
+  holders get first pick of new shares?" Recommend board consent for any transfer, free transfers
+  only to the holder's own holding company or family trust, first refusal for the other holders,
+  a tag-along, a drag-along only above a threshold every founder accepts, and pre-emption on new
+  shares.
+
+### facts.company.funding_terms
+- **Means:** the money founders put into the company at the start (subscription, loans,
+  guarantees), whether anyone must fund it later, and how profits are paid out.
+- **Type:** record (initial: list of (holder: string, kind: enum [cash, loan, guarantee, asset],
+  amount: string), further_funding: enum [none, pro-rata-if-agreed, required], dividend_policy:
+  string or none)
+- **Look:** bank or payment records are not in code; existing agreements, loan notes. The user
+  decides.
+- **Ask:** "What has each founder put in (cash, loans, guarantees)? Must anyone fund the company
+  later? How should profits be paid out?" Recommend no duty to fund beyond what each has agreed,
+  shareholder loans on written terms, and dividends only when all founders agree.

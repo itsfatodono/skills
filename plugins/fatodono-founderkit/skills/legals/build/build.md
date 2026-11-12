@@ -80,7 +80,9 @@ The steps below build a `document`. For the other kinds in `helpers/catalog.md`,
    from it.
 5. **Facts.** For each section, list the facts a writer needs. Reuse keys in `helpers/facts-schema.md`;
    add a missing key there with its question and where to look in code.
-6. **Write.** Write `skeletons/<doc-id>.md`. Done when it is valid per `formats/skeleton-format.md`.
+6. **Write.** Write `skeletons/<doc-id>.md`. The section that identifies the company or the
+   parties takes the id `contact`, `controller` or `parties`, the ones `helpers/need-to-know.md`
+   writes the postal address in. Done when it is valid per `formats/skeleton-format.md`.
 7. **Record.** Write `research/<doc-id>/README.md`: the sample list (id, company, URL, sector,
    size, language, fetch date) and the stop reason.
 

@@ -1,5 +1,11 @@
 # fatodono-founderkit
 
+## 0.7.0
+
+### Minor Changes
+
+- 594f958: legals: writes three new company documents: a founders' / shareholders' agreement, an IP assignment for founders and employees, and a freelancer / contractor agreement.
+
 ## 0.6.0
 
 ### Minor Changes

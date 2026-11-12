@@ -1,5 +1,11 @@
 # fatodono-founderkit
 
+## 0.7.1
+
+### Patch Changes
+
+- 5ccf5a0: legals and the ask-fato router now mention the company agreements, so asking for a founders', IP assignment or contractor agreement finds legals.
+
 ## 0.7.0
 
 ### Minor Changes

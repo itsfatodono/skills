@@ -8,7 +8,8 @@ across all 72 items. Feel free to contribute.
 
 Writes your app's legal documents from your own code: privacy policy, terms of service,
 subscription terms, refund policy, account deletion page, and the extra documents your users'
-countries require, such as the KVKK texts for Turkey.
+countries require, such as the KVKK texts for Turkey. It also writes the company's own
+agreements: a founders' / shareholders' agreement, an IP assignment and a contractor agreement.
 
 **It is not legal advice.** It writes drafts that follow how real companies write these
 documents. Have a lawyer read them before you publish.
@@ -62,6 +63,7 @@ Open your app's repo and ask in your own words:
 
 - "Write the legal documents for my app."
 - "Which legal documents do I need before launching on the App Store?"
+- "Write a contractor agreement for the designer we're hiring."
 - "Update my privacy policy, we added RevenueCat."
 - "I sell in Turkey, write my KVKK texts."
 - "Make legals more in favor of the company"

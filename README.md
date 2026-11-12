@@ -64,7 +64,7 @@ Skills for the work around your app that isn't code.
 
 #### [/legals](plugins/fatodono-founderkit/skills/legals)
 
-Writes your app's legal documents from your own code: privacy policy, terms of service, subscription terms, refund policy, account deletion page, and the documents your users' countries require, such as the KVKK texts for Turkey. [details](plugins/fatodono-founderkit/skills/legals/README.md#what-it-writes-today)
+Writes your app's legal documents from your own code: privacy policy, terms of service, subscription terms, refund policy, account deletion page, and the documents your users' countries require, such as the KVKK texts for Turkey. Also the company's own agreements: founders' / shareholders' agreement, IP assignment, contractor agreement. [details](plugins/fatodono-founderkit/skills/legals/README.md#what-it-writes-today)
 
 - **Simple to use.** Just say what you want; you don't need to learn the skills. [examples](plugins/fatodono-founderkit/skills/legals/README.md#run-it)
 - **Distilled from 360+ different real companies' documents.** For each document we read 25 to 30 real ones and learned which sections companies include and how they write them.

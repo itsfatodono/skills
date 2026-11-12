@@ -1,6 +1,6 @@
 ---
 name: legals
-description: Legal documents for the user's own app, filled from its code (privacy policy, terms of service, subscription terms, refund policy, account deletion page). Use to write or update them, to find which ones the app needs, or to build a skeleton for a legal document.
+description: Legal documents for the user's own app, filled from its code (privacy policy, terms of service, subscription terms, refund policy, account deletion page), and the company's own agreements (founders' / shareholders' agreement, IP assignment, contractor agreement). Use to write or update them, to find which ones the app needs, or to build a skeleton for a legal document.
 ---
 
 # Legals

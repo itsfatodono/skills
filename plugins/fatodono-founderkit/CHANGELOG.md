@@ -1,5 +1,12 @@
 # fatodono-founderkit
 
+## 0.6.1
+
+### Patch Changes
+
+- 8a3852f: legals: writes three new company documents: a founders' / shareholders' agreement, an IP assignment for founders and employees, and a freelancer / contractor agreement.
+- eecff3c: legals and the ask-fato router now mention the company agreements, so asking for a founders', IP assignment or contractor agreement finds legals.
+
 ## 0.6.0
 
 ### Minor Changes

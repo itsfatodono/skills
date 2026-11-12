@@ -1,5 +1,11 @@
 # fatodono
 
+## 0.1.3
+
+### Patch Changes
+
+- eecff3c: legals and the ask-fato router now mention the company agreements, so asking for a founders', IP assignment or contractor agreement finds legals.
+
 ## 0.1.2
 
 ### Patch Changes

@@ -10,25 +10,6 @@
 - 2026-10-27: parallel agents are told not to edit `PLAN.md` and not to commit. The chief of staff
   folds results into `PLAN.md` and commits after each one, so every run's diff stays separate.
 
-- 2026-10-27: **subagents in this harness cannot start subagents.** The RoPA `eu` run reported
-  having no tool for it, so it collected and extracted itself. This means a build agent's
-  context also holds every sample. Decision 25's nesting (build agent → collector and extractors)
-  works only when the chief of staff dispatches the collector and extractors directly. Open:
-  either flatten the dispatch (the chief of staff runs the pool and extraction steps) or note in
-  `build.md` what a builder does without a subagent tool.
-- 2026-10-27: the OpenCode config (`~/.config/opencode/opencode.json`) has no setting that
-  disables nested subagents, so this is the harness default. Claude Code has the same limit, so
-  the plugin's build method must assume two levels as well. The direction the owner was told
-  about, not yet decided: the main agent runs the build (pool, saturation, merge), and workers
-  only collect one slice or extract one sample.
-
-- 2026-10-27: **the owner decided not to write this as a rule.** In this session the chief of staff
-  acts as the builder's dispatcher: it starts `pool-collector`s (Sonnet) and `sample-extractor`s
-  (Opus) directly, judges saturation from their short replies, and hands only the merge or
-  skeleton writing to one helper. As of `d10bc73`, `build.md` step 1 already says the build branch
-  dispatches the collectors, so it fits a main-agent builder. The nesting assumption sat only
-  in how the 2026-10-26/27 runs were dispatched (one agent per whole build).
-
 - 2026-10-27 (`44096aa`): every dispatch that edits skeletons, region blocks or facts files tells the
   agent to run `tools/check-facts`, which must exit 0 before it reports back.
 
@@ -53,3 +34,6 @@ See also [runs.md](runs.md).
   So a "Resume here" note must never depend on resuming a helper. Hand off through files (merge.md, candidates.md, pool slices)
   and start a fresh helper with pointers to them. A collector that has not written its slice yet loses its work at session end,
   so collectors should write their file early.
+
+- 2026-11-12: in a build, collectors, extractors and the merge helper each run as their own agent; the build agent only dispatches.
+- 2026-11-12: in Claude Code a subagent can start subagents.

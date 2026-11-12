@@ -27,11 +27,15 @@ Skill-wide work is in [skill.md](skill.md). Decisions stay in [`PLAN.md`](../PLA
 | 39 | [Mesafeli Satış Sözleşmesi](done/tr-distance-sales.md) | document | region only: `tr` | 0 |
 | 40 | [Ön Bilgilendirme Formu](done/tr-pre-contract-info.md) | document | region only: `tr` | 0 |
 
-## In progress (0)
+## In progress (3)
 
-None.
+| No. | Item | Kind | Regions | Open tasks |
+|---|---|---|---|---|
+| 69 | [Founders' / Shareholders' Agreement](in-progress/shareholders-agreement.md) | document | root | 2 |
+| 70 | [IP Assignment (founders and employees)](in-progress/ip-assignment.md) | document | root | 2 |
+| 71 | [Freelancer / contractor agreements](in-progress/contractor-agreement.md) | document | root | 2 |
 
-## Backlog (58)
+## Backlog (55)
 
 ### A. Public core documents
 
@@ -134,9 +138,6 @@ None.
 | No. | Item | Kind | Regions | Open tasks |
 |---|---|---|---|---|
 | 68 | [Incorporation documents and tax registration](backlog/incorporation.md) | task | not decided | 1 |
-| 69 | [Founder Agreement / shareholders' agreement](backlog/founder-agreement.md) | document | root | 1 |
-| 70 | [IP Assignment (founders and employees)](backlog/ip-assignment.md) | document | root | 1 |
-| 71 | [Freelancer / contractor agreements](backlog/contractor-agreement.md) | document | root | 1 |
 | 72 | [Employee privacy notice](backlog/employee-privacy-notice.md) | document | root, with a `tr` block | 1 |
 | 73 | [Trademark registration (TÜRKPATENT, EUIPO, USPTO)](backlog/trademark-registration.md) | task | not decided (`tr`, `eu`, `us` variants) | 1 |
 | 74 | [Domain and brand usage guidelines](backlog/brand-guidelines.md) | document | root | 1 |

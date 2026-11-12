@@ -1,0 +1,202 @@
+| Company (filer) | CIK | Exhibit title as written | Form, file date | SIC, business location | Document URL | Parties and services (first screen) |
+|---|---|---|---|---|---|---|
+| Sage Therapeutics, Inc. | 1597553 | MASTER CONSULTING AGREEMENT (EX-10.2) | 10-Q, 2023-11-07 | 2834; Cambridge, MA | https://www.sec.gov/Archives/edgar/data/1597553/000095017023059750/sage-ex10_2.htm | an individual (Albert J. Robichaud, Ph.D.) as independent consultant, from 2023-09-15, services per SOWs. First screen states no prior role. Found by query "Consulting Agreement" "Statement of Work" |
+| FORESCOUT TECHNOLOGIES, INC | 1145057 | CONSULTING AGREEMENT (EX-10.1) | 8-K, 2019-06-07 | 3577; San Jose, CA | https://www.sec.gov/Archives/edgar/data/1145057/000114505719000031/a06072019101.htm | a firm (Night Dragon II, LLC, principals named) engaged under a master consulting agreement with SOWs. First screen states no prior role. Found by query "Consulting Agreement" "Statement of Work" |
+| Pacira BioSciences, Inc. | 1396814 | NON-HEALTHCARE PROFESSIONAL CONSULTING AGREEMENT (EX-10.5) | 10-Q, 2024-11-06 | 2834; Tampa, FL | https://www.sec.gov/Archives/edgar/data/1396814/000139681424000141/exhibit105-charlesareinhar.htm | an individual (Charles A. Reinhart, III) engaged by Pacira Pharmaceuticals under a non-healthcare professional consulting agreement, effective 2024-10-01, expiring 2025-06-30, services per SOWs. First screen states no prior role. Found by query "Consulting Agreement" "Statement of Work" |
+| Pure Storage, Inc. | 1474432 | CONSULTING AGREEMENT (EX-10.3) | 10-Q, 2019-12-09 | 3572; Mountain View, CA | https://www.sec.gov/Archives/edgar/data/1474432/000162828019014877/consultingagreementwit.htm | an individual (Timothy Riitters), term 2019-10-07 to 2020-02-02, services per SOWs. First screen states no prior role. Found by query "Consulting Agreement" "Statement of Work" |
+| ETSY INC | 1370637 | INDEPENDENT CONTRACTOR AGREEMENT (EX-10.1) | 10-Q, 2023-08-03 | 7389; Brooklyn, NY | https://www.sec.gov/Archives/edgar/data/1370637/000137063723000071/ex101q22023.htm | a firm (Fish Scalability, LLC) engaged under an Independent Contractor Agreement, services per SOW in Exhibit A. First screen states no prior role. Found by query "Independent Contractor Agreement" |
+| Under Armour, Inc. | 1336917 | CONSULTING SERVICES AGREEMENT (EX-10.48) | 10-K, 2026-05-19 | 2300; Baltimore, MD | https://www.sec.gov/Archives/edgar/data/1336917/000133691726000073/ua-03312026xex1048consulti.htm | an individual (Yassine Saidi), scope per Work Order in Exhibit A. First screen states no prior role. Found by query "Consulting Services Agreement" |
+| Marcus & Millichap, Inc. | 1578732 | CONSULTING SERVICES AGREEMENT (EX-10.1) | 10-Q, 2020-05-11 | 6531; Calabasas, CA | https://www.sec.gov/Archives/edgar/data/1578732/000119312520138459/d183092dex101.htm | a firm (L5K Investments, Inc.) engaged to provide consulting services per Exhibit A, terminable on 30 days notice. First screen states no prior role. Found by query "Consulting Services Agreement" |
+| REX AMERICAN RESOURCES Corp | 744187 | CONSULTING SERVICES AGREEMENT (EX-10.(F)) | 10-K, 2026-03-30 | 2860; Dayton, OH | https://www.sec.gov/Archives/edgar/data/744187/000093041326000937/c115944_ex10-f.htm | REX subsidiary One Earth Sequestration LLC engages a firm (Mercury Public Affairs LLC), services per Schedule 1, fees per Schedule 2. First screen states no prior role. Found by query "Consulting Services Agreement" |
+| Clear Secure, Inc. | 1856314 | CONSULTING SERVICES AGREEMENT (EX-10.16) | 10-K, 2024-02-28 | 7372; New York, NY | https://www.sec.gov/Archives/edgar/data/1856314/000185631424000023/consultingagreement-levine.htm | an individual (Matthew Levine) via Secure Identity, LLC, services per Schedule A. First screen states no prior role. Found by query "Consulting Services Agreement" |
+| Akebia Therapeutics, Inc. | 1517022 | MASTER CONSULTING SERVICES AGREEMENT (EX-10.4) | 10-Q, 2019-08-08 | 2834; Cambridge, MA | https://www.sec.gov/Archives/edgar/data/1517022/000156459019030771/akba-ex104_247.htm | an individual (Scott A. Canute) under a master agreement with Statements of Work. First screen states no prior role. Found by query "Consulting Services Agreement" |
+| ARENA PHARMACEUTICALS INC | 1080709 | CONSULTING SERVICES AGREEMENT (EX-10.7) | 10-Q, 2020-05-07 | 2834; San Diego, CA | https://www.sec.gov/Archives/edgar/data/1080709/000156459020022995/arna-ex107_202.htm | an individual (Steven Spector), services per written addenda. First screen states no prior role. Found by query "Consulting Services Agreement" |
+| Azenta, Inc. | 933974 | CONSULTING SERVICES AGREEMENT (EX-10.3) | 8-K, 2026-04-07 | 3559; Burlington, MA | https://www.sec.gov/Archives/edgar/data/933974/000143774926011542/ex_942629.htm | an individual, services, period, rates per Schedule A. First screen states no prior role. Found by query "Consulting Services Agreement" |
+
+## Skipped
+
+- AVANOS MEDICAL, INC., EX-10.1 (2024-12-03): consultant tied to officer or board title
+- VIAVI SOLUTIONS INC., EX-10.1 (2021-02-09): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- KLA CORP, EX-10.15 (2020-08-07): amendment, extension or release
+- Aeglea BioTherapeutics, Inc., EX-10 (2023-03-02): amendment, extension or release
+- Graham Holdings Co, EX-10.1 (2020-12-16): not a consulting engagement (other agreement type)
+- Trulieve Cannabis Corp., EX-10.15 (2021-01-12): not a consulting engagement (other agreement type)
+- Sema4 Holdings Corp., EX-10.2 (2022-06-14): amendment, extension or release
+- DYNAVAX TECHNOLOGIES CORP, EX-10.7 (2025-02-20): amendment, extension or release
+- Xenon Pharmaceuticals Inc., EX-10.31 (2025-02-27): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- VERACYTE, INC., EX-10.1 (2019-07-30): tied to departure or employment
+- ALKAMI TECHNOLOGY, INC., EX-10.1 (2025-04-30): tied to departure or employment
+- RAYTHEON TECHNOLOGIES CORP, EX-10.6 (2022-04-26): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- HARROW HEALTH, INC., EX-10.4 (2019-08-14): amendment, extension or release
+- Silk Road Medical Inc, EX-10.8 (2023-11-02): amendment, extension or release
+- Gogo Inc., EX-10.28 (2025-03-14): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- EVERBRIDGE, INC., EX-10 (2023-02-24): amendment, extension or release
+- SI-BONE, Inc., EX-10.5 (2025-11-10): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- BILL Holdings, Inc., EX-10.1 (2023-08-24): tied to departure or employment
+- BLACKLINE, INC., EX-10.1 (2026-08-03): amendment, extension or release
+- Colony Capital, Inc., EX-10.54 (2021-03-01): consultant tied to officer or board title
+- HA Sustainable Infrastructure Capital, Inc., EX-10.47 (2026-02-13): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Portillo's Inc., EX-10.1 (2026-05-21): tied to departure or employment
+- SPIRE INC, EX-10.2 (2025-04-29): amendment, extension or release
+- CENTENE CORP, EX-10.26 (2021-02-22): tied to departure or employment
+- iRhythm Technologies, Inc., EX-10.1 (2023-05-04): amendment, extension or release
+- WD 40 CO, EX-10.1 (2022-03-16): amendment, extension or release
+- SILGAN HOLDINGS INC, EX-10.6 (2026-10-20): amendment, extension or release
+- Trump Media & Technology Group Corp., EX-10.2 (2026-04-24): amendment, extension or release
+- Customers Bancorp, Inc., EX-10.1 (2026-01-26): tied to departure or employment
+- HONEYWELL INTERNATIONAL INC, EX-10.8 (2021-07-23): tied to departure or employment
+- AST SpaceMobile, Inc., EX-10.2 (2022-05-16): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Crinetics Pharmaceuticals, Inc., EX-10.1 (2026-04-10): amendment, extension or release
+- Six Flags Entertainment Corporation/NEW, EX-10.4 (III) (2026-02-26): tied to departure or employment
+- TRINET GROUP, INC., EX-10.20 (2022-02-14): amendment, extension or release
+- Baker Hughes a GE Co, EX-10.5 (2019-08-01): not a consulting engagement (other agreement type)
+- Moderna, Inc., EX-10.1 (2020-10-30): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- National Bank Holdings Corp, EX-10.3 (2026-08-05): amendment, extension or release
+- AGNT, Inc., EX-10.13 (2026-08-04): not a consulting engagement (other agreement type)
+- TELLURIAN INC. /DE/, EX-10.9 2 (2024-02-23): amendment, extension or release
+- META FINANCIAL GROUP INC, EX-10.1 (2020-12-17): tied to departure or employment
+- LifeStance Health Group, Inc., EX-10.3 (2022-08-10): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- PAPA JOHNS INTERNATIONAL INC, EX-10.1 (2019-09-06): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- nCino, Inc., EX-10.3 (2024-05-29): amendment, extension or release
+- Vertiv Holdings Co, EX-10.6 (2022-10-31): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Matador Resources Co, EX-10.60 (2022-02-28): amendment, extension or release
+- Broadmark Realty Capital Inc., EX-10.2 (2020-03-17): tied to departure or employment
+- PGT Innovations, Inc., EX-10.15 (2020-02-26): tied to departure or employment
+- SMARTSHEET INC, EX-10.2 (2024-12-05): tied to departure or employment
+- Thermon Group Holdings, Inc., EX-10.1 (2019-01-07): tied to departure or employment
+- ARDELYX, INC., EX-10.3 (2025-10-30): amendment, extension or release
+- Astrana Health, Inc., EX-10.21 (2024-05-09): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- WILSON BANK HOLDING CO, EX-10.1 (2022-11-23): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- PureCycle Technologies, Inc., EX-10.1 (2023-12-01): consultant tied to officer or board title
+- Five9, Inc., EX-10.1 (2026-01-21): amendment, extension or release
+- ENSIGN GROUP, INC, EX-10.2 (2023-02-02): not a consulting engagement (other agreement type)
+- Myovant Sciences Ltd., EX-10.1 (2020-08-11): consultant tied to officer or board title
+- FEDEX CORP, EX-10.2 (2024-09-19): not a consulting engagement (other agreement type)
+- FLOWSERVE CORP, EX-10.2 (2022-10-31): amendment, extension or release
+- UFP INDUSTRIES INC, EX-10.(I) (2025-02-26): tied to departure or employment
+- PRINCIPAL FINANCIAL GROUP INC, EX-10.1 (2021-10-28): amendment, extension or release
+- Paymentus Holdings, Inc., EX-10.2 (2026-05-05): amendment, extension or release
+- SAIA INC, EX-10.3 (2020-03-06): tied to departure or employment
+- AAON, INC., EX-10.1 (2024-08-01): amendment, extension or release
+- Veritex Holdings, Inc., EX-10.13 (2023-02-28): amendment, extension or release
+- OneStream, Inc., EX-10.5 (2024-06-28): consultant tied to officer or board title
+- Pennant Group, Inc., EX-10.12 (2019-10-03): consultant tied to officer or board title
+- AMERICAN EXPRESS CO, EX-10.1 (2026-10-23): amendment, extension or release
+- PERFICIENT INC, EX-10.1 (2020-07-30): not a consulting engagement (other agreement type)
+- Arcosa, Inc., EX-10.1 (2026-05-01): amendment, extension or release
+- Romeo Power, Inc., EX-10.8 (2021-01-05): not a consulting engagement (other agreement type)
+- StandardAero, Inc., EX-10.16 (2025-03-12): amendment, extension or release
+- Zymeworks Inc., EX-10.2 (2022-01-05): amendment, extension or release
+- Paylocity Holding Corp, EX-10.3 (2022-03-14): amendment, extension or release
+- Quantum Computing Inc., EX-10.32 (2024-04-01): amendment, extension or release
+- Arcutis Biotherapeutics, Inc., EX-10.11 (2020-01-06): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Veris Residential, Inc., EX-10.1 (2022-10-21): amendment, extension or release
+- UGI CORP /PA/, EX-10.2 (2024-03-01): amendment, extension or release
+- ESTABLISHMENT LABS HOLDINGS INC., EX-10.2 (2025-08-07): amendment, extension or release
+- TripAdvisor, Inc., EX-10.2 (2022-05-04): amendment, extension or release
+- ANSYS INC, EX-10.32 (2022-02-23): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- INSULET CORP, EX-10.1 (2023-05-04): tied to departure or employment
+- WESCO INTERNATIONAL INC, EX-10.1 (2026-06-02): consultant tied to officer or board title
+- PAR TECHNOLOGY CORP, EX-10.34 (2019-03-18): tied to departure or employment
+- Vimeo, Inc., EX-10.2 (2025-10-06): amendment, extension or release
+- StepStone Group Inc., EX-10.2 (2023-08-07): consultant tied to officer or board title
+- Lionsgate Studios Holding Corp., EX-10.9 (2025-03-24): tied to departure or employment
+- Cable One, Inc., EX-10.2 (2024-05-03): amendment, extension or release
+- Lionsgate Studios Corp., EX-10.38 (2024-05-14): tied to departure or employment
+- ADMA BIOLOGICS, INC., EX-10.1 (2026-02-25): amendment, extension or release
+- Huntsman CORP, EX-10.54 (2026-02-18): tied to departure or employment
+- JACK IN THE BOX INC, EX-10.2 23 (2024-11-21): consultant tied to officer or board title
+- Keurig Dr Pepper Inc., EX-10.1 (2019-07-16): amendment, extension or release
+- TERADATA CORP /DE/, EX-10.6 (2020-08-10): tied to departure or employment
+- PARSONS CORP, EX-10.24 (2019-04-12): amendment, extension or release
+- Applied Digital Corp., EX-10.33 (2023-10-12): amendment, extension or release
+- PTC THERAPEUTICS, INC., EX-10.1 (2022-12-06): tied to departure or employment
+- LogMeIn, Inc., EX-10.1 (2020-07-29): tied to departure or employment
+- JFrog Ltd, EX-10.19 (2024-02-15): tied to departure or employment
+- ABIOMED INC, EX-10.1 (2019-06-03): not a consulting engagement (other agreement type)
+- Walgreens Boots Alliance, Inc., EX-10.1 (2024-03-28): tied to departure or employment
+- QCR HOLDINGS INC, EX-10.1 (2025-01-08): tied to departure or employment
+- Alight, Inc. / Delaware, EX-10.1 (2026-05-05): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- DEXCOM INC, EX-10.15 (2025-02-18): amendment, extension or release
+- Xerox Holdings Corp, EX-10.1 (2024-01-05): tied to departure or employment
+- PINNACLE WEST CAPITAL CORP, EX-10.1 (2019-11-07): tied to departure or employment
+- MARKETAXESS HOLDINGS INC, EX-10.11 (2022-04-27): tied to departure or employment
+- Premier, Inc., EX-10.2 (2024-08-20): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- PEABODY ENERGY CORP, EX-10.1 (2025-12-19): tied to departure or employment
+- MAXIMUS, INC., EX-10.2 (2021-07-23): tied to departure or employment
+- NATIONAL FUEL GAS CO, EX-10.1 (2025-07-31): tied to departure or employment
+- AppLovin Corp, EX-10.26 (2024-02-26): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Alignment Healthcare, Inc., EX-10.1 (2024-08-16): consultant tied to officer or board title
+- NOVAGOLD RESOURCES INC, EX-10.24 (2019-01-23): tied to departure or employment
+- BARNES GROUP INC, EX-10.3 (2023-11-08): tied to departure or employment
+- Axogen, Inc., EX-10.2 (2022-08-25): amendment, extension or release
+- Travere Therapeutics, Inc., EX-10.1 (2022-01-06): tied to departure or employment
+- PBF Energy Inc., EX-10.1 (2022-11-29): tied to departure or employment
+- Andersons, Inc., EX-10.1 (2025-08-04): not a consulting engagement (other agreement type)
+- UNITED RENTALS, INC., EX-10.1 (2020-09-22): amendment, extension or release
+- Nextracker Inc., EX-10.3 (2025-01-31): tied to departure or employment
+- MOLSON COORS BEVERAGE CO, EX-10.1 (2023-04-06): amendment, extension or release
+- Dave & Buster's Entertainment, Inc., EX-10 (2026-09-14): tied to departure or employment
+- AT&T INC., EX-10.1 (2021-03-30): tied to departure or employment
+- Orion S.A., EX-10.2 (2025-11-07): tied to departure or employment
+- NORTHROP GRUMMAN CORP /DE/, EX-10.1 (2019-10-24): consultant tied to officer or board title
+- Cipher Digital Inc., EX-10.24 (2026-02-24): tied to departure or employment
+- AMEDISYS INC, EX-10.1 (2022-10-27): amendment, extension or release
+- Rivian Automotive, Inc. / DE, EX-10.2 (2023-11-07): amendment, extension or release
+- INTUITIVE SURGICAL INC, EX-10.14 (2020-02-07): amendment, extension or release
+- Great Lakes Dredge & Dock CORP, EX-10.3 (2019-08-02): tied to departure or employment
+- Ridgepost Capital, Inc., EX-10.2 (2026-03-23): amendment, extension or release
+- Amerant Bancorp Inc., EX-10.1 (2021-02-18): consultant tied to officer or board title
+- Snowflake Inc., EX-10.20 (2025-03-21): tied to departure or employment
+- Iridium Communications Inc., EX-10.23 (2022-02-17): tied to departure or employment
+- LPL Financial Holdings Inc., EX-10.1 (2025-07-03): tied to departure or employment
+- EMERSON ELECTRIC CO, EX-10.2 (2021-02-26): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Proto Labs Inc, EX-10.2 (2025-05-30): amendment, extension or release
+- PREMIER FINANCIAL CORP, EX-10.8 (2021-03-12): amendment, extension or release
+- UNITED NATURAL FOODS INC, EX-10.3 (2023-06-07): amendment, extension or release
+- Atlantic Union Bankshares Corp, EX-10.4 (2026-02-24): amendment, extension or release
+- PQ Group Holdings Inc., EX-10.2 (2019-12-03): consultant tied to officer or board title
+- FIRST MERCHANTS CORP, EX-10.18 (2023-03-01): amendment, extension or release
+- ALLEGHANY CORP /DE, EX-10.1 (2021-11-19): tied to departure or employment
+- VORNADO REALTY TRUST, EX-10.39 (2021-02-16): tied to departure or employment
+- Turning Point Therapeutics, Inc., EX-10.28 (2022-02-28): tied to departure or employment
+- Viridian Therapeutics, Inc.\DE, EX-10.1 (2025-05-06): tied to departure or employment
+- CARNIVAL CORP, EX-10.1 (2022-11-03): tied to departure or employment
+- HUNTINGTON BANCSHARES INC/MD, EX-10.1 (2019-05-14): tied to departure or employment
+- TCF FINANCIAL CORP, EX-10.J (2020-08-07): amendment, extension or release
+- NCR Voyix Corp, EX-10.2 (2025-02-05): amendment, extension or release
+- CENTRUS ENERGY CORP, EX-10.1 (2020-11-13): tied to departure or employment
+- Lazard Ltd, EX-10.16 (2023-05-02): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Change Healthcare Inc., EX-10.5 (2022-08-04): tied to departure or employment
+- AeroVironment Inc, EX-10.34 (2020-06-24): amendment, extension or release
+- Planet Fitness, Inc., EX-10.4 (2024-08-07): tied to departure or employment
+- Hub Group, Inc., EX-10.3 (2026-09-15): amendment, extension or release
+- WORLD FUEL SERVICES CORP, EX-10.1 (2022-03-23): amendment, extension or release
+- Goosehead Insurance, Inc., EX-10.1 (2026-07-23): amendment, extension or release
+- NOVAVAX INC, EX-10.23 (2026-02-26): amendment, extension or release
+- KAISER ALUMINUM CORP, EX-10.1 (2019-02-28): amendment, extension or release
+- SCIENTIFIC GAMES CORP, EX-10.14 (2020-11-04): amendment, extension or release
+- Morphic Holding, Inc., EX-10.8 (2019-06-14): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- YUM BRANDS INC, EX-10.24 (2025-02-19): tied to departure or employment
+- Core & Main, Inc., EX-10.4 (2021-07-28): not a consulting engagement (other agreement type)
+- agilon health, inc., EX-10.11 (2021-04-07): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- Syneos Health, Inc., EX-10.5 (2022-08-02): amendment, extension or release
+- TREX CO INC, EX-10.1 (2026-02-24): tied to departure or employment
+- QUALCOMM INC/DE, EX-10.20 (2020-11-04): not a consulting engagement (other agreement type)
+- Intapp, Inc., EX-10.17 (2021-06-04): amendment, extension or release
+- EVO Payments, Inc., EX-10.6 (2020-05-08): amendment, extension or release
+- CarGurus, Inc., EX-10.1 (2019-08-06): first screen ties consultant to a prior or current officer/employee role, or is not a services engagement
+- COHERENT CORP., EX-10.29 (2023-08-18): tied to departure or employment
+- Bloom Energy Corp, EX-10.14 (2020-03-31): amendment, extension or release
+- ROYAL GOLD INC, EX-10.1 (2024-11-07): amendment, extension or release
+- GETTY REALTY CORP /MD/, EX-10.7 (2026-02-12): tied to departure or employment
+- AVANTAX, INC., EX-10.2 (2023-01-26): not a consulting engagement (other agreement type)
+- IMMUNOMEDICS INC, EX-10.3 (2019-08-07): tied to departure or employment
+- LITTELFUSE INC /DE, EX-10.1 (2019-10-30): amendment, extension or release
+- Coca-Cola Consolidated, Inc., EX-10.1 (2022-08-02): amendment, extension or release
+- EASTMAN CHEMICAL CO, EX-10.30 (2023-02-15): amendment, extension or release
+- BIOMARIN PHARMACEUTICAL INC, EX-10.1 (2024-08-05): amendment, extension or release
+- Life Time Group Holdings, Inc., EX-10.16 (2023-03-08): amendment, extension or release
+- RESMED INC, EX-10.1 (2026-10-30): amendment, extension or release
+- TRUPANION, INC., EX-10.2 (2019-05-03): amendment, extension or release
+- 1073 hits dropped by the large-accelerated-filer filter.

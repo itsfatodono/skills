@@ -8,7 +8,7 @@ One file per item the skill aims to produce, in a folder by status. Move the fil
 
 Skill-wide work is in [skill.md](skill.md). Decisions stay in [`PLAN.md`](../PLAN.md); their numbers are cited across the repo.
 
-## Done (12)
+## Done (14)
 
 | No. | Item | Kind | Regions | Open tasks |
 |---|---|---|---|---|
@@ -17,20 +17,19 @@ Skill-wide work is in [skill.md](skill.md). Decisions stay in [`PLAN.md`](../PLA
 | 3 | [EULA](done/eula.md) | document | root; *Avoid* marks for `eu`, `tr`, `uk` | 0 |
 | 4 | [Subscription Terms](done/subscription-terms.md) | document | root | 1 |
 | 5 | [Refund Policy](done/refund-policy.md) | document | root | 0 |
+| 6 | [Cookie Policy](done/cookie-policy.md) | document | root; *Avoid* marks for `eu`, `tr`, `uk` | 5 |
 | 7 | [Account / Data Deletion page](done/account-deletion.md) | document | root | 0 |
 | 8 | [Open Source Notices](done/oss-notices.md) | document | root | 0 |
 | 11 | [KVKK Aydınlatma Metni](done/tr-kvkk-notice.md) | document | region only: `tr` | 0 |
 | 12 | [KVKK Açık Rıza Metni](done/tr-explicit-consent.md) | document | region only: `tr` | 0 |
+| 13 | [Data Subject Request Form](done/data-subject-request.md) | document | root, with `eu`, `tr`, `uk`, `us` blocks | 1 |
 | 18 | [RoPA / KVKK processing inventory](done/ropa.md) | document | root, with `eu`, `uk` blocks | 1 |
 | 39 | [Mesafeli Satış Sözleşmesi](done/tr-distance-sales.md) | document | region only: `tr` | 0 |
 | 40 | [Ön Bilgilendirme Formu](done/tr-pre-contract-info.md) | document | region only: `tr` | 0 |
 
-## In progress (2)
+## In progress (0)
 
-| No. | Item | Kind | Regions | Open tasks |
-|---|---|---|---|---|
-| 6 | [Cookie Policy](in-progress/cookie-policy.md) | document | root; *Avoid* marks for `eu`, `tr`, `uk` | 5 |
-| 13 | [Data Subject Request Form](in-progress/data-subject-request.md) | document | root, with `eu`, `tr`, `uk`, `us` blocks | 1 |
+None.
 
 ## Backlog (58)
 

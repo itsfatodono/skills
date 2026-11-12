@@ -280,27 +280,6 @@ Açık rıza first batch: 15 of 15 valid (3–15 rows; consent texts are short).
 Açık rıza: merge session `ses_e838afdb9ffeEFlnOhcDBblEs5` (decision 47 guide check, facts reuse from tr-kvkk-notice) and s16–s20 extractors launched in parallel.
 Açık rıza saturation batch 1: s16–s20 all valid (4, 3, 7, 3, 6 rows).
 
-## Resume here (session ended 2026-10-27 because the context window was full)
-
-KVKK and commerce batch (decisions 45–50). Done: `tr-pre-contract-info`, `tr-kvkk-notice`, `oss-notices` skeletons. Open:
-
-1. **`tr-explicit-consent`**: the merge session `ses_e838afdb9ffeEFlnOhcDBblEs5` was still running at session end (merge.md, decision-47 Avoid list,
-   facts preview). s16–s20 are extracted (`a50484d`). Next: resume that session to judge s16–s20, then write the skeleton (`regions/tr/tr-explicit-consent.md`,
-   Avoid fields, reuse `facts.tr.*` from tr-kvkk-notice, catalog row, README). If the merge.md is missing or partial, resume the session to finish first.
-2. **`data-subject-request` root**: 21 candidates (10/9/2, `5095bbe`). The `dsar-tail` collector `ses_e83912e2effeWa0wNt5OPxw1N5` (small companies) was still running.
-   Next: resume the selection session `ses_e83989b3dffesy9FCG7MroTmor` to add the small picks from `pool/dsar-tail.md`, then first batch (5 per size, all if fewer),
-   merge + saturation in parallel, skeleton with `eu`/`uk` blocks from *Regional content* (decision 49).
-3. **`data-subject-request` `tr` block**: 24 candidates (`069e6d4`). Its extraction may run before the root merge (the owner was offered this to save time; no answer).
-   Merge against the root ids, then write `regions/tr/data-subject-request.md` as a block.
-4. After the batch: owner review of the 5 skeletons; the retro Avoid sweep (PLAN Phase 3 todo); the root-vs-region Avoid citation question.
-
-Owner preferences in force: continue sub-tasks without asking, no new document types (owner-preferences.md). Commit only named paths (dispatch.md).
-`raw/` folders are gitignored.
-Update after the handoff: açık rıza merge finished (`ses_e838afdb9ffeEFlnOhcDBblEs5`). 19 ids (7 core / 1 common / 11 rare), no copies. Avoid: regular-transfer consent 12/15,
-consent despite another basis 5/15, blanket consent 3/15, service conditional on consent 1/15. One new key, `facts.tr.consent_capture`. s07 and the other short ones are short texts, not thin extractions.
-**For the skeleton write:** `transfer-abroad` is core, but its majority pattern is *Avoid*. Its *Applies when* must be limited to occasional transfers without Art. 9 tools
-(`facts.tr.transfer_tools`), and its Default pattern must be s06's per-case wording. Next step 1 above is now: resume this session to judge s16–s20, then write the skeleton.
-
 ## Session 2 (2026-10-27)
 
 The owner: "finish what is left under Resume here, then stop, no new items; don't ask me, I'm AFK." Scope: items 1–3; item 4 waits for the owner.

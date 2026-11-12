@@ -7,7 +7,7 @@
 | Kind | document |
 | Regions | root; *Avoid* marks for `eu`, `tr`, `uk` |
 | Needed when | non-essential cookies or trackers on the web |
-| Status | **in-progress** (started, not finished) |
+| Status | **done** (built and reviewed) |
 | Decisions | `PLAN.md` 44 |
 
 ## Built

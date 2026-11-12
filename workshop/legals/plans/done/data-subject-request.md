@@ -7,7 +7,7 @@
 | Kind | document |
 | Regions | root, with `eu`, `tr`, `uk`, `us` blocks |
 | Needed when | personal data is processed |
-| Status | **in-progress** (started, not finished) |
+| Status | **done** (built and reviewed) |
 | Decisions | `PLAN.md` 45, 49 |
 
 ## Built
@@ -24,4 +24,4 @@ Research: `research/data-subject-request/`, `research/regions/<code>/data-subjec
 
 ## Open tasks
 
-- [ ] Add samples to the `eu` and `uk` blocks. They rest on at most 7 and 4 samples, all from large companies. The pool was closed on 2026-10-27 (`wiki/owner-preferences.md`), so reopen it first.
+- [ ] Only if the owner reopens the pool (closed on 2026-10-27, `wiki/owner-preferences.md`): add samples to the `eu` and `uk` blocks. They rest on at most 7 and 4 samples, all from large companies.

@@ -133,7 +133,7 @@ Where the output goes, and how big the run is, depends on the repo you are worki
   (xhigh, the strongest model you can pick), resumed through the build: the first-batch merge, each saturation batch, the
   merge, the facts and the skeleton, so the section ids stay in one context. Build several items
   in parallel only when the user asks; you still dispatch every item's collectors and extractors
-  yourself, at most 3 per item at once (a session runs about 20 in total), and retry a subagent
-  that dies on an overload (529).
+  yourself, all of a step's at once with no cap on how many run in parallel, and retry a
+  subagent that dies on an overload (529).
 
 Either way, continue the write branch with the new files.

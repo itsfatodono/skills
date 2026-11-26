@@ -162,9 +162,9 @@ Numbers are stable because research files cite them; a gap is a decision that no
     distance sales contract, Germany's Impressum) also live in their region's folder. A
     contributor defines every missing fact as `facts.<code>.*`, even a generic one. Updating a
     published region stays with the maintainer. Rules: `region-format.md`, `CONTRIBUTING.md`.
-25. Build dispatch: a session runs about 20 subagents at once, shared by every agent in it;
-    parallel builds keep at most 3 running each, and retry a subagent that dies on an overload
-    (529). One merge helper serves the whole build and is resumed for each step, so the section
+25. Build dispatch: there is no cap on parallel subagents. Dispatch every collector and
+    extractor of a step at once, in every parallel build, and retry a subagent that dies on an
+    overload (529). One merge helper serves the whole build and is resumed for each step, so the section
     ids stay in one context. An extractor's dispatch names its candidate by id (`c07` in
     `candidates.md`) rather than copying the row.
 26. Templates are valid samples. A template or generated text is what companies publish, so it

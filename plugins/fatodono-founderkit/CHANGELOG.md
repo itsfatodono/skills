@@ -1,5 +1,11 @@
 # fatodono-founderkit
 
+## 0.6.2
+
+### Patch Changes
+
+- legals: parallel document builds no longer cap how many helpers run at once.
+
 ## 0.6.1
 
 ### Patch Changes

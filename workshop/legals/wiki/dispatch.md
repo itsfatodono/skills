@@ -5,8 +5,6 @@
   - build agents, `sample-extractor`, helpers: `anthropic/claude-opus-5-5#medium`
   - `pool-collector`: `anthropic/claude-sonnet-5-5#medium`
   This applies PLAN.md decision 25 (Opus medium, Sonnet medium for the collector) to this harness.
-- 2026-10-27: heavy build runs in parallel are capped at about 3. Decision 25 records that a
-  parallel high-effort run used up the usage window on 2026-10-26.
 - 2026-10-27: parallel agents are told not to edit `PLAN.md` and not to commit. The chief of staff
   folds results into `PLAN.md` and commits after each one, so every run's diff stays separate.
 
@@ -37,3 +35,5 @@ See also [runs.md](runs.md).
 
 - 2026-11-12: in a build, collectors, extractors and the merge helper each run as their own agent; the build agent only dispatches.
 - 2026-11-12: in Claude Code a subagent can start subagents.
+
+- 2026-11-26: no cap on parallel agents (builds, collectors, extractors). See PLAN.md decision 25.
